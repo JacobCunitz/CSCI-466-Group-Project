@@ -5,9 +5,6 @@ CREATE TABLE Contributor(
   PRIMARY KEY (ContributorID)
 ); 
 
-CREATE TABLE SongContribution(ContributorID CHAR(6), SongID
-CHAR(6), PRIMARY KEY(ContributorID, SongID), FOREIGN KEY(ContributorID)REFERENCES Contributor(ContributorID), FOREIGN KEY(SongID) REFERENCES Song(SongID)  );
-
 CREATE TABLE Song (
   SongID CHAR(6) NOT NULL,
   Title CHAR(15) NOT NULL,
@@ -16,12 +13,15 @@ CREATE TABLE Song (
   PRIMARY KEY (SongID)
 ); 
 
-CREATE TABLE Queue(UserID CHAR(6), SongID CHAR(6), Timestamp CHAR(15) NOT NULL,
-PremiumUser CHAR(3) NOT NULL, AmountPaid DECIMAL(19,2), 
-PRIMARY KEY(UserID, SongID), FOREIGN KEY(UserID)REFERENCES User(UserID), FOREIGN KEY(SongID) REFERENCES Song(SongID)  );
-
 CREATE TABLE User (
   UserID CHAR(6) NOT NULL,
   Name CHAR(20) NOT NULL,
   PRIMARY KEY (UserID)
 ); 
+
+CREATE TABLE SongContribution(ContributorID CHAR(6), SongID
+CHAR(6), PRIMARY KEY(ContributorID, SongID), FOREIGN KEY(ContributorID)REFERENCES Contributor(ContributorID), FOREIGN KEY(SongID) REFERENCES Song(SongID)  );
+
+CREATE TABLE Queue(UserID CHAR(6), SongID CHAR(6), Timestamp CHAR(15) NOT NULL,
+PremiumUser CHAR(3) NOT NULL, AmountPaid DECIMAL(19,2), 
+PRIMARY KEY(UserID, SongID), FOREIGN KEY(UserID)REFERENCES User(UserID), FOREIGN KEY(SongID) REFERENCES Song(SongID)  );
