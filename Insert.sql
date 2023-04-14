@@ -1,8 +1,9 @@
 INSERT INTO Contributor (Name) VALUES ('testname1');
 INSERT INTO Contributor (Name) VALUES ('testname2');
 
-INSERT INTO Song (Title, FileURL) VALUES ('Test Song 1', 'http://example.com/test1.mp3');
-INSERT INTO Song (Title, FileURL) VALUES ('Test Song 2', 'http://example.com/test2.mp3');
+INSERT INTO Song (Title, Description, FileURL) VALUES ('Test Song 1', 'solo', 'http://example.com/test1.mp3');
+INSERT INTO Song (Title, Description, FileURL) VALUES ('Test Song 1', 'duet', 'http://example.com/test2.mp3');
+INSERT INTO Song (Title, Description, FileURL) VALUES ('Test Song 2', '', 'http://example.com/test3.mp3');
 
 INSERT INTO User (Name) VALUES ('testname1');
 INSERT INTO User (Name) VALUES ('testname2');
