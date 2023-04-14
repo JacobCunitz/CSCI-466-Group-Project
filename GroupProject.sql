@@ -22,8 +22,8 @@ CREATE TABLE SongContribution (
   ContributorID INT(6),
   SongID INT(6),
   --Role VARCHAR(30) NOT NULL,
-  Role ENUM('artist', 'main artist', 'featured artist', 'writer', 'producer', 'engineer', 'mixer', 'editor', 'composer')
-  PRIMARY KEY(ContributorID, Song ID),
+  Role ENUM('artist', 'main artist', 'featured artist', 'writer', 'producer', 'engineer', 'mixer', 'editor', 'composer'),
+  PRIMARY KEY(ContributorID, SongID),
   FOREIGN KEY(ContributorID) REFERENCES Contributor(ContributorID),
   FOREIGN KEY(SongID) REFERENCES Song(SongID) 
 );
