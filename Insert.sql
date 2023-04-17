@@ -5,15 +5,15 @@ INSERT INTO Song (Title, Description, FileURL) VALUES ('Test Song 1', 'solo', 'h
 INSERT INTO Song (Title, Description, FileURL) VALUES ('Test Song 1', 'duet', 'http://example.com/test2.mp3');
 INSERT INTO Song (Title, Description, FileURL) VALUES ('Test Song 2', '', 'http://example.com/test3.mp3');
 
-INSERT INTO User (Name) VALUES ('testname1');
-INSERT INTO User (Name) VALUES ('testname2');
+INSERT INTO User (Name, UserName, Password, DJ) VALUES ('testname1', 'DJ', 'password', 1);
+INSERT INTO User (Name, UserName, Password, DJ) VALUES ('testname1', 'USER', 'password', 0);
 
 INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (1, 1, 'artist');
 INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (2, 1, 'producer');
 
 INSERT INTO Queue (UserID, SongID, PremiumUser, AmountPaid) VALUES (1, 1, TRUE, 9.99);
 INSERT INTO Queue (UserID, SongID, PremiumUser, AmountPaid) VALUES (2, 2, FALSE, 0.00);
-
+/*
 #INSERTING 7 SONGS AND 2 USERS, STILL NEED TO HANDLE CONTRIBUTORS - JACOB C
 INSERT INTO User
       (Name)
@@ -64,3 +64,4 @@ INSERT INTO Song
       VALUES('Pyramids',
              'Original',
              'Frank Ocean');
+*/
