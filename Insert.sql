@@ -13,3 +13,54 @@ INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (2, 1, 'produc
 
 INSERT INTO Queue (UserID, SongID, PremiumUser, AmountPaid) VALUES (1, 1, TRUE, 9.99);
 INSERT INTO Queue (UserID, SongID, PremiumUser, AmountPaid) VALUES (2, 2, FALSE, 0.00);
+
+#INSERTING 7 SONGS AND 2 USERS, STILL NEED TO HANDLE CONTRIBUTORS - JACOB C
+INSERT INTO User
+      (Name)
+      VALUES('Stacy Smith');
+
+INSERT INTO User
+      (Name)
+      VALUES('John Doe');
+
+INSERT INTO Song
+      (Title, File, Artist)
+      VALUES('Stairway to Heaven',
+             'Original',
+             'Led Zepplin');
+
+INSERT INTO Song
+      (Title, File, Artist)
+      VALUES('Back in Black',
+             'Original',
+             'AC DC');
+
+INSERT INTO Song
+      (Title, File, Artist)
+      VALUES('Sundress',
+             'Original',
+             'ASAP Rocky');
+
+INSERT INTO Song
+      (Title, File, Artist)
+      VALUES('Nights',
+             'Original',
+             'Frank Ocean');
+
+INSERT INTO Song
+      (Title, File, Artist)
+      VALUES('Redbone',
+             'Original',
+             'Childish Gambino');
+
+INSERT INTO Song
+      (Title, File, Artist)
+      VALUES('3005',
+             'Original',
+             'Childish Gambino');
+
+INSERT INTO Song
+      (Title, File, Artist)
+      VALUES('Pyramids',
+             'Original',
+             'Frank Ocean');
