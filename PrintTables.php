@@ -1,3 +1,8 @@
+<!-- PrintTables
+     Used to print all tables in database
+     Note: Access from login page by Username/password: admin
+-->    
+
 <!-- initialize PDO-->
 <?php try {
     $dsn = "mysql:host=localhost;dbname=466GroupProj";
@@ -93,6 +98,9 @@
 			<tr>
 				<th>User ID</th>
 				<th>Name</th>
+                <th>UserName</th>
+                <th>Password</th>
+                <th>Is a DJ</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -107,6 +115,10 @@
 				echo "<tr>";
 				echo "<td>" . $row["UserID"] . "</td>";
 				echo "<td>" . $row["Name"] . "</td>";
+                echo "<td>" . $row["UserName"] . "</td>";
+                echo "<td>" . $row["Password"] . "</td>";
+                echo "<td>" . ($row["DJ"] ? "Yes" : "No") . "</td>";
+
 				echo "</tr>";
 			}
 			?>
