@@ -15,13 +15,15 @@ CREATE TABLE Song (
 CREATE TABLE User (
   UserID INT(6) NOT NULL AUTO_INCREMENT,
   Name VARCHAR(30) NOT NULL,
+  UserName VARCHAR(30) NOT NULL,
+  Password VARCHAR(30) NOT NULL,
+  DJ BOOLEAN NOT NULL,
   PRIMARY KEY (UserID)
 ); 
 
 CREATE TABLE SongContribution (
   ContributorID INT(6),
   SongID INT(6),
-  --Role VARCHAR(30) NOT NULL,
   Role ENUM('artist', 'main artist', 'featured artist', 'writer', 'producer', 'engineer', 'mixer', 'editor', 'composer'),
   PRIMARY KEY(ContributorID, SongID),
   FOREIGN KEY(ContributorID) REFERENCES Contributor(ContributorID),
