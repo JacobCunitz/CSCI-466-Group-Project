@@ -16,52 +16,91 @@ INSERT INTO Queue (UserID, SongID, PremiumUser, AmountPaid) VALUES (2, 2, FALSE,
 /*
 #INSERTING 7 SONGS AND 2 USERS, STILL NEED TO HANDLE CONTRIBUTORS - JACOB C
 INSERT INTO User
-      (Name)
-      VALUES('Stacy Smith');
+      (Name, UserName, Password, DJ)
+      VALUES('Stacy Smith', 'UserName', 'Password', no);
 
 INSERT INTO User
-      (Name)
-      VALUES('John Doe');
+      (Name, UserName, Password, DJ)
+      VALUES('John Doe', 'UserName', 'Password', no);
+
+INSERT INTO User
+      (Name, UserName, Password, DJ)
+      VALUES('James Kelsey', 'UserName', 'Password', yes);
 
 INSERT INTO Song
-      (Title, File, Artist)
+      (Title, FileURL)
       VALUES('Stairway to Heaven',
-             'Original',
-             'Led Zepplin');
-
+             'Original');
 INSERT INTO Song
-      (Title, File, Artist)
+      (Title, FileURL)
       VALUES('Back in Black',
-             'Original',
-             'AC DC');
-
+             'Original');
 INSERT INTO Song
-      (Title, File, Artist)
+      (Title, FileURL)
       VALUES('Sundress',
-             'Original',
-             'ASAP Rocky');
-
+             'Original');
 INSERT INTO Song
-      (Title, File, Artist)
+      (Title, FileURL)
       VALUES('Nights',
-             'Original',
-             'Frank Ocean');
-
+             'Original');
 INSERT INTO Song
-      (Title, File, Artist)
+      (Title, FileURL)
       VALUES('Redbone',
-             'Original',
-             'Childish Gambino');
-
+             'Original');
 INSERT INTO Song
-      (Title, File, Artist)
+      (Title, FileURL)
       VALUES('3005',
-             'Original',
-             'Childish Gambino');
-
+             'Original');
 INSERT INTO Song
-      (Title, File, Artist)
+      (Title, FileURL)
       VALUES('Pyramids',
-             'Original',
-             'Frank Ocean');
+             'Original');
+
+INSERT INTO Contributor
+       (Name)
+       VALUE('ASAP Rocky');
+
+INSERT INTO Contributor
+       (Name)
+       VALUE('Frank Ocean');
+
+INSERT INTO Contributor
+       (Name)
+       VALUE('Childish Gambino');
+
+INSERT INTO Contributor
+       (Name)
+       VALUE('Brian Johnson');
+
+INSERT INTO Contributor
+       (Name)
+       VALUE('Robert Plant');
+
+INSERT INTO SongContribution
+       (ContributorID, SongID, Role)
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'ASAP Rocky'), (SELECT SongID FROM Song WHERE Name = 'Sundress'), 'main artist');
+
+INSERT INTO SongContribution
+       (ContributorID, SongID, Role)
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Frank Ocean'), (SELECT SongID FROM Song WHERE Name = 'Pyramids'), 'main artist');
+
+INSERT INTO SongContribution
+       (ContributorID, SongID, Role)
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Frank Ocean'), (SELECT SongID FROM Song WHERE Name = 'Nights'), 'main artist');
+
+INSERT INTO SongContribution
+       (ContributorID, SongID, Role)
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Childish Gambino'), (SELECT SongID FROM Song WHERE Name = 'Redbone'), 'main artist');
+
+INSERT INTO SongContribution
+       (ContributorID, SongID, Role)
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Childish Gambino'), (SELECT SongID FROM Song WHERE Name = '3005'), 'main artist');
+
+INSERT INTO SongContribution
+       (ContributorID, SongID, Role)
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Brian Johnson'), (SELECT SongID FROM Song WHERE Name = 'Back in Black'), 'artist');
+
+INSERT INTO SongContribution
+       (ContributorID, SongID, Role)
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Robert Plant'), (SELECT SongID FROM Song WHERE Name = 'Stairway to Heaven'), 'artist');
 */
