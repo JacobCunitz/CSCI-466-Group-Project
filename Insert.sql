@@ -17,15 +17,15 @@ INSERT INTO Queue (UserID, SongID, PremiumUser, AmountPaid) VALUES (2, 2, FALSE,
 #INSERTING 7 SONGS AND 2 USERS, STILL NEED TO HANDLE CONTRIBUTORS - JACOB C
 INSERT INTO User
       (Name, UserName, Password, DJ)
-      VALUES('Stacy Smith', 'UserName', 'Password', no);
+      VALUES('Stacy Smith', 'UserName', 'Password', FALSE);
 
 INSERT INTO User
       (Name, UserName, Password, DJ)
-      VALUES('John Doe', 'UserName', 'Password', no);
+      VALUES('John Doe', 'UserName', 'Password', FALSE);
 
 INSERT INTO User
       (Name, UserName, Password, DJ)
-      VALUES('James Kelsey', 'UserName', 'Password', yes);
+      VALUES('James Kelsey', 'UserName', 'Password', TRUE);
 
 INSERT INTO Song
       (Title, FileURL)
