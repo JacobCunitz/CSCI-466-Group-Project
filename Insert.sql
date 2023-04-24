@@ -76,6 +76,14 @@ INSERT INTO Contributor
        (Name)
        VALUE('Robert Plant');
 
+INSERT INTO Contributor
+       (Name)
+       VALUE('ACDC');
+       
+INSERT INTO Contributor
+       (Name)
+       VALUE('Led Zepplin');
+       
 INSERT INTO SongContribution
        (ContributorID, SongID, Role)
        VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'ASAP Rocky'), (SELECT SongID FROM Song WHERE Name = 'Sundress'), 'main artist');
@@ -98,9 +106,17 @@ INSERT INTO SongContribution
 
 INSERT INTO SongContribution
        (ContributorID, SongID, Role)
-       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Brian Johnson'), (SELECT SongID FROM Song WHERE Name = 'Back in Black'), 'artist');
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Brian Johnson'), (SELECT SongID FROM Song WHERE Name = 'Back in Black'), 'main artist');
 
 INSERT INTO SongContribution
        (ContributorID, SongID, Role)
        VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Robert Plant'), (SELECT SongID FROM Song WHERE Name = 'Stairway to Heaven'), 'artist');
+       
+INSERT INTO SongContribution
+       (ContributorID, SongID, Role)
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'ACDC'), (SELECT SongID FROM Song WHERE Name = 'Back in Black'), 'artist');
+       
+INSERT INTO SongContribution
+       (ContributorID, SongID, Role)
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Led Zepplin'), (SELECT SongID FROM Song WHERE Name = 'Stairway to Heaven'), 'artist');
 */
