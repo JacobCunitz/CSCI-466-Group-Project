@@ -20,7 +20,7 @@
    $username='';
    $password='';
    try{
-       $dsn = "mysql:host=courses;dbname="";
+       $dsn = "mysql:host=courses;dbname= ";
        $pdo = new PDO($dsn, $username, $password);
        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
