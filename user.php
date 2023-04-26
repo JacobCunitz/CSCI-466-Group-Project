@@ -22,7 +22,7 @@
         $dsn = "mysql:host=localhost;dbname=466GroupProj";
         $username = "root";
         //$password = '';
-        $pdo = new PDO($dsn, $username);
+        $pdo = new PDO($dsn, $username, $password);
     } catch (PDOException $e) {
         echo "Connection to database failed: " . $e->getMessage();
     } 
