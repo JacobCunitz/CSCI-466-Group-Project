@@ -41,10 +41,10 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
             header("Location: PrintTables.php");
             exit();
         } elseif ($row['DJ'] == 1) {
-            header("Location: DJ.html");
+            header("Location: DJ.php");
             exit();
         } else {
-            header("Location: user.html");
+            header("Location: user.php");
             exit();
         }
     } else {
