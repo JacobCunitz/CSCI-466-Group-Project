@@ -31,12 +31,13 @@ CREATE TABLE SongContribution (
 );
 
 CREATE TABLE Queue (
+  QueueID INT(6) AUTO_INCREMENT,
   UserID INT(6),
   SongID INT(6),
   processing_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   PremiumUser BOOLEAN NOT NULL,
   AmountPaid DECIMAL(4,2), 
-  PRIMARY KEY(UserID, SongID),
+  PRIMARY KEY(QueueID),
   FOREIGN KEY(UserID) REFERENCES User(UserID),
   FOREIGN KEY(SongID) REFERENCES Song(SongID)  
 ); 
