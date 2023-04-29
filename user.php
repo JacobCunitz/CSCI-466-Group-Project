@@ -17,12 +17,13 @@
     </style>
     <body>
     <?php
+    session_start();
 
     try {
         $dsn = "mysql:host=localhost;dbname=466GroupProj";
         $username = "root";
         //$password = '';
-        $pdo = new PDO($dsn, $username, $password);
+        $pdo = new PDO($dsn, $username);
     } catch (PDOException $e) {
         echo "Connection to database failed: " . $e->getMessage();
     } 
@@ -54,12 +55,17 @@
         echo '</form>';
         
         //table header
-        echo "<table><tr><th>SongID</th><th>Title</th><th>Description</th><th>FileURL</th></tr>";
-        
+        echo "<table><tr><th>SongID</th><th>Title</th><th>Description</th><th>FileURL</th><th>FREE</th><th>Premium($1.99)</th></tr>";
+
         // Output rows
         while($row = $stmt->fetch()) {
-            echo "<tr><td>".$row["SongID"]."</td><td>".$row["Title"]."</td><td>".$row["Description"]."</td><td>".$row["FileURL"]."</td></tr>";
+            $_SESSION['SongID'] = $row['SongID'];
+
+            echo "<tr><td>".$row["SongID"]."</td><td>".$row["Title"]."</td><td>".$row["Description"]."</td><td>".$row["FileURL"]."</td>";
+            echo "<td><a href='add_song.php?add=0'>Add</a></td>";
+            echo "<td><a href='add_song.php?add=1'>Add</a></td></tr>";
         }
+        
 
         echo "</table>";
     } else {
@@ -68,3 +74,4 @@
     ?>
     </body>
 </html>
+
