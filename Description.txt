@@ -1,0 +1,22 @@
+Our ER diagram has 3 entities and 2 relations. The first entity is song, song has a six digit ID that is an integer and 
+set to auto increment, so each new song will yield a new primary key that is incremented, this can not be null. We have a Title attribute, that is
+a varchar and is 30 possible characters long and is the title of the song, this attribute also can not be null. We have a descrition of the song that
+is a 100 character varchar. Which describes the song to the user to help them make a selection, these descriptions will also tell the user the differences between any differnt files of the song, this attribute is able to be null. Our last attribute for song is FileUrl, which is a 500 character varchar which
+will lead the user to the song and version that they selected.
+
+Our next entity is contributor, contributor has 2 total attributes. It has ContributorId which words the exact same way as the primary key for song, this is also the primary key for contributor. The contributor also has a name which is a 30 character varchar, this attribute can not be null.
+
+Next we have a relation called SongContribution, it has 3 attributes. It has SongID and ContributorID, these IDs are both from the song entity and the
+contributor entity. This tells us what contributors are playing a role in a given song. We also have a role, which can be chosen from a given list of
+options. This relation is many to many, because one song can have multiple contributors, and one contributor can contribute to multiple songs.
+
+Next we have the User entity, this entity has 5 relations. The first relation is UserID, it is the primary key and works the exact same way as the 
+SongID and the ContributorID for the Song and the Contributor entities. We have a Name for the user that is a 30 character varchar, and this is not allowed
+to be null. We have a UserName and password that each user will use to login, and they are both 30 character varchars. We have a DJ attribute which is
+a boolean, and this identifies which page to show the user, based on whether or not they are a DJ or not.
+
+Our final piece of our diagram is Queue. Queue has two primary keys which are two foreign keys, which is the SongID and the UserID, these are both from the Song and the User entity. These uniquely identity the user that is signing up for the queue and the exact song and version that the user is selecting to sing.
+We then have processing_time, which is the time that the user signed up in the queue. This is important for the queue that is not the priority queue,
+because it determines the order of users, and the default is the current time that the user inserted thir selection. We then have PremiumUser, which is
+a boolean and can not be set to null, this determines which queue that the user is put into. We then have AmountPaid, which is an entity that states the
+amount that the user paid, this allows us to sort the priority queue based on how much money that the user has paid.
