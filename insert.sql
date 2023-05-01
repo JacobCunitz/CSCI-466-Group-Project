@@ -120,3 +120,75 @@ INSERT INTO SongContribution
        (ContributorID, SongID, Role)
        VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Led Zepplin'), (SELECT SongID FROM Song WHERE Title = 'Stairway to Heaven'), 'artist');
 */
+
+/*2 users and 7 songs, still need to add more contributers -AH
+INSERT INTO User
+      (Name, UserName, Password, DJ)
+      VALUES('Jane Doe', 'USER', 'Notpassword', FALSE);
+
+INSERT INTO User
+      (Name, UserName, Password, DJ)
+      VALUES('Jonny Appleseed', 'USER', 'NotApassword', FALSE);
+
+INSERT INTO Song (Title, Description, FileURL) VALUES('Viva La Vida', 'solo', '');
+
+INSERT INTO Song (Title, Description, FileURL) VALUES('King Kunta', 'solo', '');
+
+INSERT INTO Song (Title, Description, FileURL) VALUES('My Girl', 'solo', '');
+
+INSERT INTO Song (Title, Description, FileURL) VALUES('Last Nite', 'solo', '');
+
+INSERT INTO Song (Title, Description, FileURL) VALUES('Empire State Of Mind', 'duet', '');
+
+INSERT INTO Song (Title, Description, FileURL) VALUES('Hold On, We're Going Home', 'solo', '');
+
+INSERT INTO Song (Title, Description, FileURL) VALUES('Billie Jean', 'solo', '');
+
+INSERT INTO Contributor (Name) VALUES ('Coldplay');
+
+INSERT INTO Contributor (Name) VALUES ('Kendrick Lamar');
+
+INSERT INTO Contributor (Name) VALUES ('The Temptations');
+
+INSERT INTO Contributor (Name) VALUES ('The Strokes');
+
+INSERT INTO Contributor (Name) VALUES ('Jay Z');
+INSERT INTO Contributor (Name) VALUES ('Alicia Keys');
+
+INSERT INTO Contributor (Name) VALUES ('Drake');
+
+INSERT INTO Contributor (Name) VALUES ('Michael Jackson');
+
+INSERT INTO SongContribution
+       (ContributorID, SongID, Role)
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Coldplay'), (SELECT SongID FROM Song WHERE Title = 'Viva La Vida'), 'artist');
+
+INSERT INTO SongContribution
+       (ContributorID, SongID, Role)
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Kendrick Lamar'), (SELECT SongID FROM Song WHERE Title = 'King Kunta'), 'artist');
+
+INSERT INTO SongContribution
+       (ContributorID, SongID, Role)
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'My Girl'), (SELECT SongID FROM Song WHERE Title = 'The Temptations'), 'artist');
+
+INSERT INTO SongContribution
+       (ContributorID, SongID, Role)
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Last Nite'), (SELECT SongID FROM Song WHERE Title = 'The Strokes'), 'artist');
+
+INSERT INTO SongContribution
+       (ContributorID, SongID, Role)
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'New York State Of Mind'), (SELECT SongID FROM Song WHERE Title = 'Jay Z'), 'artist');
+
+INSERT INTO SongContribution
+       (ContributorID, SongID, Role)
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'New York State Of Mind'), (SELECT SongID FROM Song WHERE Title = 'Alicia Keys'), 'featured artist');
+    
+INSERT INTO SongContribution
+       (ContributorID, SongID, Role)
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Hold On, We're Going Home'), (SELECT SongID FROM Song WHERE Title = 'Drake'), 'artist');   
+
+INSERT INTO SongContribution
+       (ContributorID, SongID, Role)
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Billie Jean'), (SELECT SongID FROM Song WHERE Title = 'Michael Jackson'), 'artist');
+*/
+
