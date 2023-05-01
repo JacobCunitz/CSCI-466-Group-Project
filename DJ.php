@@ -42,7 +42,7 @@
 </thead>
 
 <?php
-   $rs = $pdo->query("SELECT Title, Role, UserName, FileURL FROM Queue, User, Song, SongContribution WHERE PremiumUser = 1 AND Queue.SongID = Song.SongID AND User.UserID = Queue.UserID AND Queue.SongID = SongContribution.SongID AND SongContribution.Role = 'artist' ORDER BY AmountPaid;");
+   $rs = $pdo->query("SELECT Title, Role, Name, FileURL FROM Queue, User, Song, SongContribution WHERE PremiumUser = 1 AND Queue.SongID = Song.SongID AND User.UserID = Queue.UserID AND Queue.SongID = SongContribution.SongID AND SongContribution.Role = 'artist' ORDER BY AmountPaid DESC;");
    $rows = $rs->fetchAll(PDO::FETCH_ASSOC);
 
    foreach($rows as $row)
@@ -50,7 +50,7 @@
       echo"<tr>";
       echo"<td>" . $row["Title"] . "</td>";
       echo"<td>" . $row["Role"] . "</td>";
-      echo"<td>" . $row["UserName"] . "</td>";
+      echo"<td>" . $row["Name"] . "</td>";
       echo"<td>" . $row["FileURL"] . "</td>";
       echo"</tr>";
 
@@ -79,7 +79,7 @@
 </thead>
 
 <?php
-   $rs = $pdo->query("SELECT Title, Role, UserName, FileURL FROM Queue, User, Song, SongContribution WHERE PremiumUser = 0 AND Queue.SongID = Song.SongID AND User.UserID = Queue.UserID AND Queue.SongID = SongContribution.SongID AND SongContribution.Role = 'artist' ORDER BY processing_time;");
+   $rs = $pdo->query("SELECT Title, Role, Name, FileURL FROM Queue, User, Song, SongContribution WHERE PremiumUser = 0 AND Queue.SongID = Song.SongID AND User.UserID = Queue.UserID AND Queue.SongID = SongContribution.SongID AND SongContribution.Role = 'artist' ORDER BY processing_time ASC;");
    $rows = $rs->fetchAll(PDO::FETCH_ASSOC);
 
    foreach($rows as $row)
@@ -87,7 +87,7 @@
       echo"<tr>";
       echo"<td>" . $row["Title"] . "</td>";
       echo"<td>" . $row["Role"] . "</td>";
-      echo"<td>" . $row["UserName"] . "</td>";
+      echo"<td>" . $row["Name"] . "</td>";
       echo"<td>" . $row["FileURL"] . "</td>";
       echo"</tr>";
 
@@ -109,12 +109,12 @@
 
    if($q == "NP")
    {
-       $update = $pdo->prepare("DELETE FROM Queue WHERE PremiumUser=0 LIMIT 1;");
+       $update = $pdo->prepare("DELETE FROM Queue WHERE PremiumUser=0 ASC LIMIT 1;");
        $update->execute();
    }
   else if($q == "PR")
    {
-       $update = $pdo->prepare("DELETE FROM Queue WHERE PremiumUser=1 LIMIT 1;");
+       $update = $pdo->prepare("DELETE FROM Queue WHERE PremiumUser=1 DESC LIMIT 1;");
        $update->execute();
    }
 
