@@ -140,7 +140,7 @@ INSERT INTO Song (Title, Description, FileURL) VALUES('Last Nite', 'solo', '');
 
 INSERT INTO Song (Title, Description, FileURL) VALUES('Empire State Of Mind', 'duet', '');
 
-INSERT INTO Song (Title, Description, FileURL) VALUES('Hold On, We're Going Home', 'solo', '');
+INSERT INTO Song (Title, Description, FileURL) VALUES('Hold On, We''re Going Home', 'solo', '');
 
 INSERT INTO Song (Title, Description, FileURL) VALUES('Billie Jean', 'solo', '');
 
@@ -185,7 +185,7 @@ INSERT INTO SongContribution
     
 INSERT INTO SongContribution
        (ContributorID, SongID, Role)
-       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Hold On, We're Going Home'), (SELECT SongID FROM Song WHERE Title = 'Drake'), 'artist');   
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Hold On, We''re Going Home'), (SELECT SongID FROM Song WHERE Title = 'Drake'), 'artist');   
 
 INSERT INTO SongContribution
        (ContributorID, SongID, Role)
