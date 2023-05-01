@@ -97,30 +97,29 @@
 
 <form method="POST">
     Select Queue to play next:
-    <select size=2 name="Queuetype">
-       <option value="PR">PriorityQueue</option>
-       <option value="NP">Non-PriorityQueue</option>
-    </select>
+    <input type="radio" name="radio1" value="Priority"/>Priority Queue
+    <input type="radio" name="radio1" value="Non-Priority"/>Non-Priority Queue
     <input type="submit" name="submit"/>
     <input type="reset" value="reset"/>
 
 </form>
 <?php
-   $q=$_POST['Queuetype'];
+   $q=$_POST['radio1'];
 
-   if($q == "NP")
+   if($q == "Non-Priority")
    {
-       $update = $pdo->prepare("DELETE FROM Queue WHERE PremiumUser=0 ORDER BY processing_time ASC LIMIT 1;");
+       $update = $pdo->prepare("DELETE FROM Queue WHERE PremiumUser=0 ORDER BY processing_time ASC >
        $update->execute();
    }
-  else if($q == "PR")
+   else if($q == "Priority")
    {
-       $update = $pdo->prepare("DELETE FROM Queue WHERE PremiumUser=1 ORDER BY AmountPaid DESC LIMIT 1;");
+       $update = $pdo->prepare("DELETE FROM Queue WHERE PremiumUser=1 ORDER BY AmountPaid DESC LIMI>
        $update->execute();
    }
 
 
 ?>
+
 
 </html>
 
