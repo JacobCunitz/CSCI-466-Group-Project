@@ -97,6 +97,38 @@
         echo "<tr>";
       }
      echo "</table>";    
+	    
+     echo "<br/>";
+     echo "<br/>";
+
+
+    echo '<html><head></head><body><p>
+            Pick an Artist to search for
+            </p>
+          <form method="GET">
+          <input type="text" name="Search" value="Search"/> <br/>
+          <input type="submit" name="submit" value="SUBMIT" />
+          </form>';
+
+     $rs2 = $pdo->prepare("SELECT DISTINCT SongID, Title, FileURL
+                                    FROM Song, Contributor, SongContribution WHERE Song.SongID = (SELECT  SongID FROM SongContribution WHERE
+                                                                                                    SongContribution.ContributorID =
+                                                                                                     (SELECT ContributorID FROM Contributor WHERE
+                                                                                                        artist = :cvalue));");
+     $rs2->execute(array(":cvalue" => $_GET['Search']));
+     if(!$rs2) {echo "error in query"; die(); }
+
+     $R_out2 = $rs2->fetchALL(PDO::FETCH_ASSOC);
+     echo "<table border=1 cellspacing=1>";
+     foreach ($R_out2 as $res)  {
+        echo "<tr>";
+        foreach ($res as $row)  {
+            echo "<td>$row</td>";
+          }
+        echo "<tr>";
+      }
+     echo "</table>";
+
     ?>
     </body>
 </html>
