@@ -130,19 +130,19 @@ INSERT INTO User
       (Name, UserName, Password, DJ)
       VALUES('Jonny Appleseed', 'USER', 'NotApassword', FALSE);
 
-INSERT INTO Song (Title, Description, FileURL) VALUES('Viva La Vida', 'solo', '');
+INSERT INTO Song (Title, Description, FileURL) VALUES('Viva La Vida', 'solo', 'https://www.youtube.com/watch?v=FSll_OC0L64');
 
-INSERT INTO Song (Title, Description, FileURL) VALUES('King Kunta', 'solo', '');
+INSERT INTO Song (Title, Description, FileURL) VALUES('King Kunta', 'solo', 'https://www.youtube.com/watch?v=TepbpUTI8o4');
 
-INSERT INTO Song (Title, Description, FileURL) VALUES('My Girl', 'solo', '');
+INSERT INTO Song (Title, Description, FileURL) VALUES('My Girl', 'solo', 'https://www.youtube.com/watch?v=fuq_VBauc0A');
 
-INSERT INTO Song (Title, Description, FileURL) VALUES('Last Nite', 'solo', '');
+INSERT INTO Song (Title, Description, FileURL) VALUES('Last Nite', 'solo', 'https://www.youtube.com/watch?v=Gfsyf5JLck0');
 
-INSERT INTO Song (Title, Description, FileURL) VALUES('Empire State Of Mind', 'duet', '');
+INSERT INTO Song (Title, Description, FileURL) VALUES('Empire State Of Mind', 'duet', 'https://www.youtube.com/watch?v=52WbRVGAUBI');
 
-INSERT INTO Song (Title, Description, FileURL) VALUES('Hold On, We''re Going Home', 'solo', '');
+INSERT INTO Song (Title, Description, FileURL) VALUES('Hold On, We''re Going Home', 'solo', 'https://www.youtube.com/watch?v=ZrgaKQN6Vcw');
 
-INSERT INTO Song (Title, Description, FileURL) VALUES('Billie Jean', 'solo', '');
+INSERT INTO Song (Title, Description, FileURL) VALUES('Billie Jean', 'solo', 'https://www.youtube.com/watch?v=eXqBhDAlVCc');
 
 INSERT INTO Contributor (Name) VALUES ('Coldplay');
 
