@@ -71,6 +71,32 @@
     } else {
         echo "No songs found in the database.";
     }
+    echo "<br/>";
+    echo "<br/>";
+
+    echo '<html><head></head><body><p>
+            Pick a Title to search for
+            </p>
+          <form method="GET">
+          <input type="text" name="Search" value="Search"/> <br/>
+          <input type="submit" name="submit" value="SUBMIT" />
+          </form>';
+
+     $rs1 = $pdo->prepare("SELECT DISTINCT SongID, Title, FileURL
+                                    FROM Song WHERE Title = :cvalue ;");
+     $rs1->execute(array(":cvalue" => $_GET['Search']));
+     if(!$rs1) {echo "error in query"; die(); }
+
+     $R_out = $rs1->fetchALL(PDO::FETCH_ASSOC);
+     echo "<table border=1 cellspacing=1>";
+     foreach ($R_out as $res)  {
+        echo "<tr>";
+        foreach ($res as $row)  {
+            echo "<td>$row</td>";
+          }
+        echo "<tr>";
+      }
+     echo "</table>";    
     ?>
     </body>
 </html>
