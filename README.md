@@ -8,7 +8,7 @@ admin - admin
 
 
 ### user.php
--search \
+-search Jacob.C Search for title done, Working on Search for artist and Contributor \
 -contributor col. \
 ### dj.php
 -everything
