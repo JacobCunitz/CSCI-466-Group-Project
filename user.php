@@ -130,11 +130,12 @@
           <input type="submit" name="submit" value="SUBMIT" />
           </form>';
 
-     $rs2 = $pdo->prepare("SELECT DISTINCT SongID, Title, FileURL
-                                    FROM Song, Contributor, SongContribution WHERE Song.SongID = (SELECT  SongID FROM SongContribution WHERE
-                                                                                                    SongContribution.ContributorID =
+     $rs2 = $pdo->prepare("SELECT DISTINCT Song.SongID, Title, FileURL
+                                    FROM Song, Contributor, SongContribution WHERE Song.SongID IN (SELECT  SongID FROM SongContribution WHERE
+                                                                                                    SongContribution.ContributorID IN
                                                                                                      (SELECT ContributorID FROM Contributor WHERE
-                                                                                                        artist = :cvalue));");
+                                                                                                        name = :cvalue));");
+
      $rs2->execute(array(":cvalue" => $_GET['Search']));
      if(!$rs2) {echo "error in query"; die(); }
 
