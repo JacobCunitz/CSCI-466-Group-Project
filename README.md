@@ -7,7 +7,7 @@ admin - admin
 
 
 ### user.php
--search,    Search for title is done, will work on search for artist and contributor and finish in class tomorrow - Jacob.C \
+-search,    Working, tables need headers - Jacob.C \
 -contributor col. \
 
 ### dj.php
