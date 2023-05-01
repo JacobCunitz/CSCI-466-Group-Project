@@ -5,7 +5,7 @@ Contributor(ContributorID, Name)
 Song(SongID, Title, Description, FileURL)
 User(UserID, Name, UserName, Password, DJ)
 SongContribution(ContributorID, SongID, Role)
-Queue(UserID, SongID, processing_time, PremiumUser, AmountPaid)
+Queue(QueueID, UserID, SongID, processing_time, PremiumUser, AmountPaid)
 
 Foreign Keys:
 SongContribution-ContributorID- The home relation is located in Contributor, since there is a one to many relation for SongContribution with Contributor as a contributor can have more than one song contribution. Thus, ContributorID
