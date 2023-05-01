@@ -79,7 +79,7 @@
 </thead>
 
 <?php
-   $rs = $pdo->query("SELECT Title, Role, UserName, FileURL FROM Queue, User, Song, SongContribution WHERE PremiumUser = 0 AND Queue.SongID = Song.SongID AND User.UserID = Queue.UserID AND Queue.SongID = SongContribution.SongID AND SongContribution.Role = 'artist' ORDER BY AmountPaid;");
+   $rs = $pdo->query("SELECT Title, Role, UserName, FileURL FROM Queue, User, Song, SongContribution WHERE PremiumUser = 0 AND Queue.SongID = Song.SongID AND User.UserID = Queue.UserID AND Queue.SongID = SongContribution.SongID AND SongContribution.Role = 'artist' ORDER BY processing_time;");
    $rows = $rs->fetchAll(PDO::FETCH_ASSOC);
 
    foreach($rows as $row)
