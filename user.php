@@ -14,11 +14,33 @@
 			font-size: 24px;
 			font-weight: bold;
 		}
+        .button {
+            position: fixed;
+            top: 10;
+            right: 10;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 4px;
+        }
     </style>
     <body>
     <?php
+    
+    //sign out button
     session_start();
+    if(!isset($_SESSION['UserID'])) {
+      header("Location: login.php");
+      exit;
+    }
 
+    echo '<h2><a href="login.php" class="button">Sign Out</a></h2>';
+
+    //db connection
     try {
         $dsn = "mysql:host=localhost;dbname=466GroupProj";
         $username = "root";
@@ -65,8 +87,6 @@
             echo "<td><a href='add_song.php?add=0'>Add</a></td>";
             echo "<td><a href='add_song.php?add=1'>Add</a></td></tr>";
         }
-        
-
         echo "</table>";
     } else {
         echo "No songs found in the database.";
@@ -101,19 +121,20 @@
      echo "<br/>";
      echo "<br/>";
 
+
     echo '<html><head></head><body><p>
-            Search For Song by Contributor or Main Artist
+            Pick an Artist to search for
             </p>
           <form method="GET">
           <input type="text" name="Search" value="Search"/> <br/>
           <input type="submit" name="submit" value="SUBMIT" />
           </form>';
 
-     $rs2 = $pdo->prepare("SELECT DISTINCT Song.SongID, Title, FileURL
-                                    FROM Song, Contributor, SongContribution WHERE Song.SongID IN (SELECT  SongID FROM SongContribution WHERE
+     $rs2 = $pdo->prepare("SELECT DISTINCT SongID, Title, FileURL
+                                    FROM Song, Contributor, SongContribution WHERE Song.SongID = (SELECT  SongID FROM SongContribution WHERE
                                                                                                     SongContribution.ContributorID =
                                                                                                      (SELECT ContributorID FROM Contributor WHERE
-                                                                                                        name = :cvalue));");
+                                                                                                        artist = :cvalue));");
      $rs2->execute(array(":cvalue" => $_GET['Search']));
      if(!$rs2) {echo "error in query"; die(); }
 
@@ -131,4 +152,3 @@
     ?>
     </body>
 </html>
-
