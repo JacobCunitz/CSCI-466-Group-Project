@@ -102,13 +102,17 @@
           <input type="submit" name="submit" value="SUBMIT" />
           </form>';
 
-     $rs1 = $pdo->prepare("SELECT DISTINCT SongID, Title, FileURL
+     $rs1 = $pdo->prepare("SELECT DISTINCT SongID, Title, Description, FileURL
                                     FROM Song WHERE Title = :cvalue ;");
      $rs1->execute(array(":cvalue" => $_GET['Search']));
      if(!$rs1) {echo "error in query"; die(); }
 
      $R_out = $rs1->fetchALL(PDO::FETCH_ASSOC);
      echo "<table border=1 cellspacing=1>";
+     foreach ($R_out[0] as $key =>$item) {
+        echo "<th>$key</th>";
+      }
+     echo "</tr>";
      foreach ($R_out as $res)  {
         echo "<tr>";
         foreach ($res as $row)  {
@@ -130,7 +134,7 @@
           <input type="submit" name="submit" value="SUBMIT" />
           </form>';
 
-     $rs2 = $pdo->prepare("SELECT DISTINCT Song.SongID, Title, FileURL
+     $rs2 = $pdo->prepare("SELECT DISTINCT Song.SongID, Title, Description, FileURL
                                     FROM Song, Contributor, SongContribution WHERE Song.SongID IN (SELECT  SongID FROM SongContribution WHERE
                                                                                                     SongContribution.ContributorID IN
                                                                                                      (SELECT ContributorID FROM Contributor WHERE
@@ -141,6 +145,10 @@
 
      $R_out2 = $rs2->fetchALL(PDO::FETCH_ASSOC);
      echo "<table border=1 cellspacing=1>";
+     foreach ($R_out2[0] as $key =>$item) {
+        echo "<th>$key</th>";
+      }
+     echo "</tr>";
      foreach ($R_out2 as $res)  {
         echo "<tr>";
         foreach ($res as $row)  {
