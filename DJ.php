@@ -97,7 +97,7 @@
 
 <form method="POST">
     Select Queue to play next:
-    <input type="radio" name="radio1" value="Priority"/>Priority Queue
+    <input type="radio" name="radio1" value="Priority" checked="checked"/>Priority Queue
     <input type="radio" name="radio1" value="Non-Priority"/>Non-Priority Queue
     <input type="submit" name="submit"/>
     <input type="reset" value="reset"/>
