@@ -110,11 +110,13 @@
    {
        $update = $pdo->prepare("DELETE FROM Queue WHERE PremiumUser=0 ORDER BY processing_time ASC >
        $update->execute();
+       echo "<meta http-equiv='refresh' content='0'>";
    }
    else if($q == "Priority")
    {
        $update = $pdo->prepare("DELETE FROM Queue WHERE PremiumUser=1 ORDER BY AmountPaid DESC LIMI>
        $update->execute();
+       echo "<meta http-equiv='refresh' content='0'>";  
    }
 
 
