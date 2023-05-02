@@ -174,5 +174,10 @@ INSERT INTO SongContribution (ContributorID, SongID, Role) VALUE((SELECT Contrib
 INSERT INTO SongContribution (ContributorID, SongID, Role) VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Drake'), (SELECT SongID FROM Song WHERE Title = 'Hold On, We''re Going Home'), 'artist');   
 
 INSERT INTO SongContribution (ContributorID, SongID, Role) VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Michael Jackson'), (SELECT SongID FROM Song WHERE Title = 'Billie Jean'), 'artist');
+
+INSERT INTO Queue (UserID, SongID, PremiumUser, AmountPaid) VALUE ((SELECT UserID FROM User WHERE Name = 'Jonny Appleseed'),(SELECT SongID FROM Song WHERE Title = 'Billie Jean'), 1, 7.50);
+
+INSERT INTO Queue (UserID, SongID, PremiumUser) VALUE ((SELECT UserID FROM User WHERE Name = 'Jane Doe'),(SELECT SongID FROM Song WHERE Title = 'Viva La Vida'), 0);
+
 */
 
