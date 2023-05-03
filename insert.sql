@@ -450,8 +450,6 @@ INSERT INTO Contributor (Name) VALUES ('Fabrizio Moretti');
 INSERT INTO Contributor (Name) VALUES ('Jay Z');
 INSERT INTO Contributor (Name) VALUES ('Alicia Keys');
 
-INSERT INTO Contributor (Name) VALUES ('Drake');
-
 INSERT INTO Contributor (Name) VALUES ('Michael Jackson');
 
 INSERT INTO SongContribution (ContributorID, SongID, Role) VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Coldplay'), (SELECT SongID FROM Song WHERE Title = 'Viva La Vida'), 'artist');
