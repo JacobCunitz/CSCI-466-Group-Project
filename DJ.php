@@ -15,8 +15,24 @@
                         font-size: 24px;
                         font-weight: bold;
                 }
+                .button {
+            position: fixed;
+            top: 10;
+            right: 10;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 4px;
+        }
     </style>
 <?php
+
+echo '<h2><a href="login.php" class="button">Sign Out</a></h2>';
+
    $username='root';
    $password='';
    try{
