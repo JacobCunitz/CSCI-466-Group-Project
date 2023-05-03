@@ -77,11 +77,7 @@ INSERT INTO Song
       VALUES('Hells Bells',
              'Original',
              'https://www.youtube.com/watch?v=etAIpkdhU9Q');
-INSERT INTO Song
-      (Title, Description, FileURL)
-      VALUES('Come A Little Closer',
-             'Original',
-             'https://www.youtube.com/watch?v=KVYup3Qwh8Q');
+
 INSERT INTO Song
       (Title, Description, FileURL)
       VALUES('Everlong',
@@ -102,8 +98,38 @@ INSERT INTO Song
       VALUES('Hail to the King',
              'Original',
              'https://www.youtube.com/watch?v=MjwttGizNEs&list=RDGMEMJQXQAmqrnmK1SEjY_rKBGA&start_radio=1&rv=W4XiSFyYRE8');
+             
+INSERT INTO Song
+      (Title, Description, FileURL)
+      VALUES('Dear Mama',
+             'Original',
+             'https://www.youtube.com/watch?v=Mb1ZvUDvLDY');
 
 
+INSERT INTO Contributor (Name) VALUES ('Eminem');
+INSERT INTO Contributor (Name) VALUES ('Drake');
+INSERT INTO Contributor (Name) VALUES ('Lil Wayne');
+INSERT INTO Contributor (Name) VALUES ('Kanye West');
+INSERT INTO Contributor (Name) VALUES ('Def Leppard');
+INSERT INTO Contributor (Name) VALUES ('Avenge Sevenfold');
+INSERT INTO Contributor (Name) VALUES ('Foo Fighters');
+INSERT INTO Contributor (Name) VALUES ('Nirvana');
+INSERT INTO Contributor (Name) VALUES ('Krist Novoselic');
+INSERT INTO Contributor (Name) VALUES ('Dave Grohl');
+INSERT INTO Contributor (Name) VALUES ('Kurt Cobain');
+INSERT INTO Contributor (Name) VALUES ('Taylor Hawkins');
+INSERT INTO Contributor (Name) VALUES ('Pat Smear');
+INSERT INTO Contributor (Name) VALUES ('Chris Shiflett');
+INSERT INTO Contributor (Name) VALUES ('Nat Mendel');
+INSERT INTO Contributor (Name) VALUES ('Rami Jaffee');
+INSERT INTO Contributor (Name) VALUES ('William Goldsmith');
+INSERT INTO Contributor (Name) VALUES ('Franz Stahl');
+INSERT INTO Contributor (Name) VALUES ('Rick Savage');
+INSERT INTO Contributor (Name) VALUES ('Joe Elliott');
+INSERT INTO Contributor (Name) VALUES ('Rick Allen');
+INSERT INTO Contributor (Name) VALUES ('Phil Collen');
+INSERT INTO Contributor (Name) VALUES ('Vivian Campbell');
+INSERT INTO Contributor (Name) VALUES ('2Pac');
 
 
 INSERT INTO Contributor
@@ -136,11 +162,119 @@ INSERT INTO Contributor
        
 INSERT INTO SongContribution
        (ContributorID, SongID, Role)
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = '2Pac'), (SELECT SongID FROM Song WHERE Title = 'Dear Mama'), 'artist');
+       
+INSERT INTO SongContribution
+       (ContributorID, SongID, Role)
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Joe Elliot'), (SELECT SongID FROM Song WHERE Title = 'Love Bites'), 'featured artist');
+       
+INSERT INTO SongContribution
+       (ContributorID, SongID, Role)
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Vivian Campbell'), (SELECT SongID FROM Song WHERE Title = 'Love Bites'), 'featured artist');
+       
+INSERT INTO SongContribution
+       (ContributorID, SongID, Role)
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Phil Collen'), (SELECT SongID FROM Song WHERE Title = 'Love Bites'), 'featured artist');
+       
+INSERT INTO SongContribution
+       (ContributorID, SongID, Role)
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Rick Allen'), (SELECT SongID FROM Song WHERE Title = 'Love Bites'), 'featured artist');
+       
+INSERT INTO SongContribution
+       (ContributorID, SongID, Role)
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Rick Savage'), (SELECT SongID FROM Song WHERE Title = 'Love Bites'), 'featured artist');
+       
+INSERT INTO SongContribution
+       (ContributorID, SongID, Role)
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Def Leppard'), (SELECT SongID FROM Song WHERE Title = 'Love Bites'), 'artist');
+       
+INSERT INTO SongContribution
+       (ContributorID, SongID, Role)
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Franz Stahl'), (SELECT SongID FROM Song WHERE Title = 'Everlong'), 'featured artist');
+       
+INSERT INTO SongContribution
+       (ContributorID, SongID, Role)
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'William Goldsmith'), (SELECT SongID FROM Song WHERE Title = 'Everlong'), 'featured artist');
+       
+INSERT INTO SongContribution
+       (ContributorID, SongID, Role)
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Rami Jaffee'), (SELECT SongID FROM Song WHERE Title = 'Everlong'), 'featured artist');
+       
+INSERT INTO SongContribution
+       (ContributorID, SongID, Role)
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Nat Mendel'), (SELECT SongID FROM Song WHERE Title = 'Everlong'), 'featured artist');
+       
+INSERT INTO SongContribution
+       (ContributorID, SongID, Role)
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Foo Fighters'), (SELECT SongID FROM Song WHERE Title = 'Everlong'), 'artist');
+       
+INSERT INTO SongContribution
+       (ContributorID, SongID, Role)
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Taylor Hawkins'), (SELECT SongID FROM Song WHERE Title = 'Everlong'), 'featured artist');
+       
+INSERT INTO SongContribution
+       (ContributorID, SongID, Role)
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Pat Smear'), (SELECT SongID FROM Song WHERE Title = 'Everlong'), 'featured artist');
+       
+INSERT INTO SongContribution
+       (ContributorID, SongID, Role)
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Chris Shiflett'), (SELECT SongID FROM Song WHERE Title = 'Everlong'), 'featured artist');
+       
+INSERT INTO SongContribution
+       (ContributorID, SongID, Role)
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Avenge Sevenfold'), (SELECT SongID FROM Song WHERE Title = 'Hail to the King'), 'artist');
+       
+INSERT INTO SongContribution
+       (ContributorID, SongID, Role)
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Nirvana'), (SELECT SongID FROM Song WHERE Title = 'Smells Like Teen Spirit'), 'artist');
+       
+INSERT INTO SongContribution
+       (ContributorID, SongID, Role)
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Krist Novoselic'), (SELECT SongID FROM Song WHERE Title = 'Smells Like Teen Spirit'), 'featured artist');
+       
+INSERT INTO SongContribution
+       (ContributorID, SongID, Role)
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Dave Grohl'), (SELECT SongID FROM Song WHERE Title = 'Smells Like Teen Spirit'), 'featured artist');
+       
+INSERT INTO SongContribution
+       (ContributorID, SongID, Role)
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Kurt Cobain'), (SELECT SongID FROM Song WHERE Title = 'Smells Like Teen Spirit'), 'main artist');
+       
+INSERT INTO SongContribution
+       (ContributorID, SongID, Role)
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Eminem'), (SELECT SongID FROM Song WHERE Title = 'Forever'), 'featured artist');
+       
+INSERT INTO SongContribution
+       (ContributorID, SongID, Role)
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Eminem'), (SELECT SongID FROM Song WHERE Title = 'Forever'), 'featured artist');
+       
+INSERT INTO SongContribution
+       (ContributorID, SongID, Role)
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Lil Wayne'), (SELECT SongID FROM Song WHERE Title = 'Forever'), 'featured artist');
+       
+INSERT INTO SongContribution
+       (ContributorID, SongID, Role)
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Kanye West'), (SELECT SongID FROM Song WHERE Title = 'Forever'), 'featured artist');
+       
+INSERT INTO SongContribution
+       (ContributorID, SongID, Role)
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Drake'), (SELECT SongID FROM Song WHERE Title = 'Forever'), 'featured artist');
+       
+INSERT INTO SongContribution
+       (ContributorID, SongID, Role)
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Brian Johnson'), (SELECT SongID FROM Song WHERE Title = 'Hells Bells'), 'main artist');
+       
+INSERT INTO SongContribution
+       (ContributorID, SongID, Role)
        VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'ASAP Rocky'), (SELECT SongID FROM Song WHERE Title = 'Sundress'), 'main artist');
 
 INSERT INTO SongContribution
        (ContributorID, SongID, Role)
        VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Frank Ocean'), (SELECT SongID FROM Song WHERE Title = 'Pyramids'), 'main artist');
+       
+INSERT INTO SongContribution
+       (ContributorID, SongID, Role)
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Frank Ocean'), (SELECT SongID FROM Song WHERE Title = 'Nikes'), 'main artist');
 
 INSERT INTO SongContribution
        (ContributorID, SongID, Role)
