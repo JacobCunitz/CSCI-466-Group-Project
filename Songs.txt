@@ -1,0 +1,277 @@
+INSERT INTO Song (Title, Description, FileURL) VALUES('Stayin Alive', 'solo', 'http:/stayinalive.mp3');
+
+INSERT INTO Song (Title, Description, FileURL) VALUES('Shallow', 'solo', 'http:/shallow.mp3');
+INSERT INTO Song (Title, Description, FileURL) VALUES('Shallow', 'duet', 'http:/shallowV2.mp3');
+
+INSERT INTO Song (Title, Description, FileURL) VALUES('Take Me Home, Country Roads', 'solo', 'http:/takemehome.mp3');
+
+INSERT INTO Song (Title, Description, FileURL) VALUES('Come On Eileen', 'solo', 'http:/comeoneileen.mp3');
+
+INSERT INTO Song (Title, Description, FileURL) VALUES('I Kissed A Girl', 'solo', 'http:/ikissedagirl.mp3');
+
+INSERT INTO Song (Title, Description, FileURL) VALUES('Mr. Brightside', 'solo', 'http:/mrbrightside.mp3');
+
+INSERT INTO Song (Title, Description, FileURL) VALUES('She Will Be Loved', 'solo', 'http:/shewillbeloved.mp3');
+
+INSERT INTO Song (Title, Description, FileURL) VALUES('Somebody That I Used To Know', 'duet', 'http:/somebodythatiusedtoknowV2.mp3');
+
+INSERT INTO Song (Title, Description, FileURL) VALUES('Somebody That I Used To Know', 'solo', 'http:/sombbodythatiusedtoknow.mp3');
+
+INSERT INTO Song (Title, Description, FileURL) VALUES('Uptown Funk', 'solo', 'http:/uptownfunk.mp3');
+
+INSERT INTO Song (Title, Description, FileURL) VALUES('When You Were Young', 'solo', 'http:/whenyouwereyoung.mp3')
+
+INSERT INTO Song (Title, Description, FileURL) VALUES('Roar', 'solo', 'http:/roar.mp3');
+
+INSERT INTO Song (Title, Description, FileURL) VALUES('California Gurls', 'solo', 'http:/californiagurls.mp3');
+
+INSERT INTO Song (Title, Description, FileURL) VALUES('You Should Be Dancing', 'solo', 'http:/youshouldbedancing.mp3');
+
+INSERT INTO Song (Title, Description, FileURL) VALUES('Bad Romance', 'solo', 'http:/badromance.mp3');
+
+INSERT INTO Song (Title, Description, FileURL) VALUES('I Want It That Way', 'solo', 'http:/iwantitthatway.mp3');
+
+INSERT INTO Song (Title, Description, FileURL) VALUES('Rocket Man', 'solo', 'http:/rocketman.mp3');
+
+INSERT INTO Song (Title, Description, FileURL) VALUES('Say Something', 'solo', 'http:/saysomething.mp3');
+
+INSERT INTO Song (Title, Description, FileURL) VALUES('Say Something', 'duet', 'http:/saysomethingV2.mp3');
+
+INSERT INTO Song (Title, Description, FileURL) VALUES('Poker Face', 'solo', 'http:/pokerface.mp3');
+
+INSERT INTO Song (Title, Description, FileURL) VALUES('Last Friday Night', 'solo', 'http:/lastfridaynight.mp3');
+
+INSERT INTO Song (Title, Description, FileURL) VALUES('Everybody', 'solo', 'http:/everybody.mp3');
+
+INSERT INTO Song (Title, Description, FileURL) VALUES('Tiny Dancer', 'solo', 'http:/tinydancer');
+
+INSERT INTO Song (Title, Description, FileURL) VALUES('Crocodile Rock', 'solo', 'http:/crocodilerock.mp3');
+
+INSERT INTO Song (Title, Description, FileURL) VALUES('Larger Than Life', 'solo', 'http:/largerthanlife');
+
+INSERT INTO Song (Title, Description, FileURL) VALUES('Billie Jean', 'solo', 'http:/billiejean.mp3');
+
+INSERT INTO Song (Title, Description, FileURL) VALUES('Bad', 'solo', 'http:/bad.mp3');
+
+INSERT INTO Song (Title, Description, FileURL) VALUES('Smooth Criminal', 'solo', 'http:/smoothcriminal.mp3');
+
+INSERT INTO Song (Title, Description, FileURL) VALUES('Beat It', 'solo', 'http:/beatit');
+
+INSERT INTO Contributor (Name) VALUES ('Barry Gibb');
+INSERT INTO Contributor (Name) VALUES ('Robin Gibb');
+INSERT INTO Contributor (Name) VALUES ('Maurice Gibb');
+INSERT INTO Contributor (Name) VALUES ('Bee Gees');
+
+INSERT INTO Contributor (Name) VALUES ('Lady Gaga');
+INSERT INTO Contributor (Name) VALUES ('Mark Ronson');
+INSERT INTO Contributor (Name) VALUES ('Benjamin Rice');
+
+INSERT INTO Contributor (Name) VALUES ('Bradley Cooper');
+
+INSERT INTO Contributor (Name) VALUES ('John Denver');
+INSERT INTO Contributor (Name) VALUES ('Bill Danoff');
+INSERT INTO Contributor (Name) VALUES ('Taffy Nivert');
+
+INSERT INTO Contributor (Name) VALUES ('Dexys Midnight Runners');
+INSERT INTO Contributor (Name) VALUES ('Kevin Rowland');
+INSERT INTO Contributor (Name) VALUES ('Jim Paterson');
+INSERT INTO Contributor (Name) VALUES ('Helen O'Hara');
+
+INSERT INTO Contributor (Name) VALUES ('Katy Perry');
+INSERT INTO Contributor (Name) VALUES ('Max Martin');
+INSERT INTO Contributor (Name) VALUES ('Dr. Luke');
+
+INSERT INTO Contributor (Name) VALUES ('The Killers');
+INSERT INTO Contributor (Name) VALUES ('Brandon Flowers');
+INSERT INTO Contributor (Name) VALUES ('Dave Keuning');
+INSERT INTO Contributor (Name) VALUES ('Ronnie Vannucci Jr');
+
+INSERT INTO Contributor (Name) VALUES ('Maroon 5');
+INSERT INTO Contributor (Name) VALUES ('Adam Levine');
+INSERT INTO Contributor (Name) VALUES ('James Valentine');
+
+INSERT INTO Contributor (Name) VALUES ('Goyte');
+INSERT INTO Contributor (Name) VALUES ('Kimbra');
+
+INSERT INTO Contributor (Name) VALUES ('Bruno Mars');
+
+INSERT INTO Contributor (Name) VALUES ('Bonnie McKee');
+
+INSERT INTO Contributor (Name) VALUES ('Snoop Dogg');
+
+INSERT INTO Contributor (Name) VALUES ('RedOne');
+
+INSERT INTO Contributor (Name) VALUES ('Backstreet Boys');
+INSERT INTO Contributor (Name) VALUES ('Nick Carter');
+INSERT INTO Contributor (Name) VALUES ('Howie Dorough');
+INSERT INTO Contributor (Name) VALUES ('AJ McLean');
+
+INSERT INTO Contributor (Name) VALUES ('Elton John');
+INSERT INTO Contributor (Name) VALUES ('Bernie Taupin');
+
+INSERT INTO Contributor (Name) VALUES ('A Great Big World');
+INSERT INTO Contributor (Name) VALUES ('Ian Axel');
+INSERT INTO Contributor (Name) VALUES ('Chad King');
+
+INSERT INTO Contributor (Name) VALUES ('Christina Aguilera');
+
+INSERT INTO Contributor (Name) VALUES ('Micheal Jackson');
+INSERT INTO Contributor (Name) VALUES ('Quincy Jones');
+
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (1, 1, 'main artist');
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (2, 1, 'composer');
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (3, 1, 'composer');
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (4, 1, 'artist');
+
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (5, 2, 'artist');
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (6, 2, 'composer');
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (7, 2, 'producer');
+
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (5, 3, 'artist');
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (6, 3, 'composer');
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (7, 3, 'producer');
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (8, 3, 'featured artist');
+
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (9, 4, 'artist');
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (10, 4, 'composer');
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (11, 4, 'composer');
+
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (12, 5, 'artist');
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (13, 5, 'main artist');
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (14, 5, 'composer);
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (15, 5, 'composer');
+
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (16, 6, 'artist');
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (17, 6, 'composer');
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (18, 6, 'producer');
+
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (19, 7, 'artist');
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (20, 7, 'main artist');
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (21, 7, 'composer');
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (22, 7, 'composer');
+
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (23, 8, 'artist');
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (24, 8, 'main artist');
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (25, 8, 'composer');
+
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (26, 9, 'artist');
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (27, 9, 'featured artist');
+
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (26, 10, 'artist');
+
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (28, 11, 'featured artist');
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (6, 11, 'artist');
+
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (19, 12, 'artist');
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (20, 12, 'main artist');
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (21, 12, 'composer');
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (22, 12, 'composer');
+
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (29, 13, 'composer');
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (16, 13, 'artist');
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (18, 13, 'producer');
+
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (16, 14, 'artist');
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (18, 14, 'producer');
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (30, 14, 'featured artist');
+
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (1, 15, 'main artist');
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (2, 15, 'composer');
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (3, 15, 'composer');
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (4, 15, 'artist');
+
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (5, 16, 'artist');
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (31, 16, 'producer');
+
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (32, 17, 'artist');
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (33, 17, 'composer');
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (34, 17, 'composer');
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (35, 17, 'composer');
+
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (36, 18, 'artist');
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (37, 18, 'composer');
+
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (38, 19, 'artist');
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (39, 19, 'composer');
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (40, 19, 'composer')
+
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (38, 20, 'artist');
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (39, 20, 'composer');
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (40, 20, 'composer');
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (41, 20, 'featured artist');
+
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (5, 21, 'artist');
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (31, 21, 'producer');
+
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (16, 22, 'artist')
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (18, 22, 'producer');
+
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (32, 23, 'artist');
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (33, 23, 'composer');
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (34, 23, 'composer');
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (35, 23, 'composer');
+
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (36, 24, 'artist');
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (37, 24, 'composer');
+
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (36, 25, 'artist');
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (37, 25, 'composer');
+
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (32, 26, 'artist');
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (33, 26, 'composer');
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (34, 26, 'composer');
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (35, 26, 'composer');
+
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (42, 27, 'artist');
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (43, 27, 'producer');
+
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (42, 28, 'artist');
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (43, 28, 'producer');
+
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (42, 29, 'artist');
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (43, 29, 'producer');
+
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (42, 30, 'artist');
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (43, 30, 'producer');
+
+INSERT INTO User (Name, UserName, Password, DJ) VALUES ('Joe', 'Jo', 'dj47', 1);
+
+INSERT INTO User (Name, UserName, Password, DJ) VALUES ('John', 'johnny25', 'password', 0);
+
+INSERT INTO User (Name, UserName, Password, DJ) VALUES ('Mark', 'Marky Mark', '1234', 0);
+
+INSERT INTO User (Name, UserName, Password, DJ) VALUES ('Luke', 'lucus', 'hidden', 0);
+
+INSERT INTO User (Name, UserName, Password, DJ) VALUES ('Matthew', 'holy', 'spirit', 0);
+
+INSERT INTO User (Name, UserName, Password, DJ) VALUES ('Mary', 'Mary', 'hello',0);
+
+INSERT INTO User (Name, UserName, Password, DJ) VALUES ('Alex', 'Alex', '4321', 0);
+
+INSERT INTO User (Name, UserName, Password, DJ) VALUES ('Grace', 'Gracie', 'pass', 0);
+
+INSERT INTO User (Name, UserName, Password, DJ) VALUES ('Max', 'Mad Max', 'word', 0);
+
+INSERT INTO User (Name, UserName, Password, DJ) VALUES ('Ted', 'Teddy', 'secret', 0);
+
+INSERT INTO User (Name, UserName, Password, DJ) VALUES ('Tim', 'Timmy', 'timmy', 0);
+
+INSERT INTO Queue (UserID, SongID, PremiumUser, AmountPaid) VALUES (4, 15, FALSE, 0.00);
+
+INSERT INTO Queue (UserID, SongID, PremiumUser, AmountPaid) VALUES (7, 3, FALSE,0.00);
+
+INSERT INTO Queue (UserID, SongID, PremiumUser, AmountPaid) VALUES (8, 8, FALSE, 0.00);
+
+INSERT INTO Queue (UserID, SongID, PremiumUser, AmountPaid) VALUES (3, 24, FALSE, 0.00);
+
+INSERT INTO Queue (UserID, SongID, PremiumUser, AmountPaid) VALUES (9, 27, FALSE, 0.00);
+
+INSERT INTO Queue (UserID, SongID, PremiumUser, AmountPaid) VALUES (2, 12, TRUE,1.99);
+
+INSERT INTO Queue (UserID, SongID, PremiumUser, AmountPaid) VALUES (5, 19, TRUE, 2.99);
+
+INSERT INTO Queue (UserID, SongID, PremiumUser, AmountPaid) VALUES (6, 21, TRUE, 3.99);
+
+INSERT INTO Queue (UserID, SongID, PremiumUser, AmountPaid) VALUES (10, 14, TRUE, 0.99);
+
+INSERT INTO Queue (UserID, SongID, PremiumUser, AmountPaid) VALUES (11, 23, TRUE, 4.99);
