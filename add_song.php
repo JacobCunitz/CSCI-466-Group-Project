@@ -4,10 +4,10 @@ $UserID = $_SESSION['UserID'];
 $SongID = $_GET['songid'];
 
 // Connect to the database
-$db_host = "localhost";
-$db_user = "root";
-$db_pass = "";
-$db_name = "466GroupProj";
+$db_host = "courses";
+$db_user = "z1883633";
+$db_pass = "2000Nov07";
+$db_name = "z1883633";
 $conn = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
 
 //add song to queue
