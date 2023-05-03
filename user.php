@@ -30,13 +30,10 @@
     </style>
     <body>
     <?php
-    
+
     //sign out button
     session_start();
-    if(!isset($_SESSION['UserID'])) {
-      header("Location: login.php");
-      exit;
-    }
+   
 
     echo '<h2><a href="login.php" class="button">Sign Out</a></h2>';
 
@@ -49,8 +46,7 @@
     } catch (PDOException $e) {
         echo "Connection to database failed: " . $e->getMessage();
     } 
-    
-  
+
     // Check if a sorting option has been selected
     $sortOption = isset($_GET['sort']) ? $_GET['sort'] : '';
 
@@ -58,14 +54,16 @@
     $searchTerm = isset($_GET['search']) ? $_GET['search'] : '';
 
     // Construct the SQL query based on the sorting option and search term
-    $sql = "SELECT * FROM Song";
+    $sql = "SELECT Song.*, Contributor.Name AS Artist FROM Song LEFT JOIN SongContribution ON Song.SongID = SongContribution.SongID LEFT JOIN Contributor ON SongContribution.ContributorID = Contributor.ContributorID";
     if (!empty($searchTerm)) {
-        $sql .= " WHERE Title LIKE '%$searchTerm%' OR Description LIKE '%$searchTerm%'";
+        $sql .= " WHERE Song.Title LIKE '%$searchTerm%' OR Song.Description LIKE '%$searchTerm%' OR Contributor.Name LIKE '%$searchTerm%'";
     }
     if ($sortOption == 'title') {
-        $sql .= " ORDER BY Title";
+        $sql .= " ORDER BY Song.Title";
     } elseif ($sortOption == 'description') {
-        $sql .= " ORDER BY Description";
+        $sql .= " ORDER BY Song.Description";
+    } elseif ($sortOption == 'artist') {
+        $sql .= " ORDER BY Contributor.Name";
     }
 
     // Execute the query
@@ -81,21 +79,25 @@
         echo '<option value="">ID</option>';
         echo '<option value="title" ' . ($sortOption == 'title' ? 'selected' : '') . '>Title</option>';
         echo '<option value="description" ' . ($sortOption == 'description' ? 'selected' : '') . '>Description</option>';
+        echo '<option value="artist" ' . ($sortOption == 'artist' ? 'selected' : '') . '>Artist</option>';
         echo '</select>';
         echo '<input type="submit" value="Filter">';
         echo '</form>';
 
         // Output the table header
-        echo "<table><tr><th>SongID</th><th>Title</th><th>Description</th><th>FileURL</th><th>FREE</th><th>Premium($1.99)</th></tr>";
+        echo "<table><tr><th>SongID</th><th>Title</th><th>Description</th><th>URL</th><th>Artist</th><th>FREE</th><th>Premium($1.99)</th></tr>";
 
         // Output the table rows
         while($row = $stmt->fetch()) {
             $_SESSION['SongID'] = $row['SongID'];
 
-            echo "<tr><td>".$row["SongID"]."</td><td>".$row["Title"]."</td><td>".$row["Description"]."</td><td>".$row["FileURL"]."</td>";
-            echo "<td><a href='add_song.php?add=0'>Add</a></td>";
-            echo "<td><a href='add_song.php?add=1'>Add</a></td></tr>";
-        }
+            echo "<tr><td>".$row["SongID"]."</td><td>".$row["Title"]."</td><td>".$row["Description"]."</td><td>".$row["FileURL"]."</td><td>".$row["Artist"]."</td>";
+            
+
+            echo "<td><a href='add_song.php?add=0&songid=".$row["SongID"]."'>Add</a></td>";
+            echo "<td><a href='add_song.php?add=1&songid=".$row["SongID"]."'>Add</a></td></tr>";
+            
+            }
 
         echo "</table>";
     } else {
