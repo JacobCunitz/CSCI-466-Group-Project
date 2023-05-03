@@ -17,44 +17,94 @@ INSERT INTO Queue (UserID, SongID, PremiumUser, AmountPaid) VALUES (2, 2, FALSE,
 #INSERTING 7 SONGS AND 2 USERS, STILL NEED TO HANDLE CONTRIBUTORS - JACOB C
 INSERT INTO User
       (Name, UserName, Password, DJ)
-      VALUES('Stacy Smith', 'USER', 'password', FALSE);
+      VALUES('Stacy Smith', 'USER', 'password1', FALSE);
 
 INSERT INTO User
       (Name, UserName, Password, DJ)
-      VALUES('John Doe', 'USER', 'password', FALSE);
+      VALUES('John Doe', 'USER', 'password2', FALSE);
 
 INSERT INTO User
       (Name, UserName, Password, DJ)
-      VALUES('James Kelsey', 'DJ', 'password', TRUE);
+      VALUES('James Kelsey', 'DJ', 'password3', TRUE);
 
 INSERT INTO Song
-      (Title, FileURL)
+      (Title, Description, FileURL)
       VALUES('Stairway to Heaven',
-             'Original');
+             'Original',
+             'https://www.youtube.com/watch?v=QkF3oxziUI4');
 INSERT INTO Song
-      (Title, FileURL)
+      (Title, Description, FileURL)
       VALUES('Back in Black',
-             'Original');
+             'Original',
+              'https://www.youtube.com/watch?v=pAgnJDJN4VA');
 INSERT INTO Song
-      (Title, FileURL)
+      (Title, Description, FileURL)
       VALUES('Sundress',
-             'Original');
+             'Original',
+             'https://www.youtube.com/watch?v=xre-oQn1DhY');
 INSERT INTO Song
-      (Title, FileURL)
+      (Title, Description, FileURL)
       VALUES('Nights',
-             'Original');
+             'Original',
+             'https://www.youtube.com/watch?v=r4l9bFqgMaQ');
 INSERT INTO Song
-      (Title, FileURL)
+      (Title, Description, FileURL)
       VALUES('Redbone',
-             'Original');
+             'Original',
+             'https://www.youtube.com/watch?v=Kp7eSUU9oy8');
 INSERT INTO Song
-      (Title, FileURL)
+      (Title, Description, FileURL)
       VALUES('3005',
-             'Original');
+             'Original',
+              'https://www.youtube.com/watch?v=Jh3fn9YwFtI');
 INSERT INTO Song
-      (Title, FileURL)
+      (Title, Description, FileURL)
       VALUES('Pyramids',
-             'Original');
+             'Original',
+             'https://www.youtube.com/watch?v=dMV31MWIjLE');             
+INSERT INTO Song
+      (Title, Description, FileURL)
+      VALUES('Nikes',
+             'Original',
+             'https://www.youtube.com/watch?v=diIFhc_Kzng');
+INSERT INTO Song
+      (Title, Description, FileURL)
+      VALUES('Forever',
+             'Original',
+             'https://www.youtube.com/watch?v=eDuRoPIOBjE');
+INSERT INTO Song
+      (Title, Description, FileURL)
+      VALUES('Hells Bells',
+             'Original',
+             'https://www.youtube.com/watch?v=etAIpkdhU9Q');
+INSERT INTO Song
+      (Title, Description, FileURL)
+      VALUES('Come A Little Closer',
+             'Original',
+             'https://www.youtube.com/watch?v=KVYup3Qwh8Q');
+INSERT INTO Song
+      (Title, Description, FileURL)
+      VALUES('Everlong',
+             'Original',
+             'https://www.youtube.com/watch?v=AxuTd9rwEHQ');
+INSERT INTO Song
+      (Title, Description, FileURL)
+      VALUES('Smells Like Teen Spirit',
+             'Original',
+             'https://www.youtube.com/watch?v=hTWKbfoikeg');
+INSERT INTO Song
+      (Title, Description, FileURL)
+      VALUES('Love Bites',
+             'Original',
+             'https://www.youtube.com/watch?v=W4XiSFyYRE8');
+INSERT INTO Song
+      (Title, Description, FileURL)
+      VALUES('Hail to the King',
+             'Original',
+             'https://www.youtube.com/watch?v=MjwttGizNEs&list=RDGMEMJQXQAmqrnmK1SEjY_rKBGA&start_radio=1&rv=W4XiSFyYRE8');
+
+
+
 
 INSERT INTO Contributor
        (Name)
