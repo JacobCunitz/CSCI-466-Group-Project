@@ -42,7 +42,7 @@
 </thead>
 
 <?php
-   $rs = $pdo->query("SELECT Title, Role, UserName, FileURL FROM Queue, User, Song, SongContribution WHERE PremiumUser = 1 AND Queue.SongID = Song.SongID AND User.UserID = Queue.UserID AND Queue.SongID = SongContribution.SongID AND SongContribution.Role = 'artist' ORDER BY AmountPaid;");
+   $rs = $pdo->query("SELECT Title, Role, Name, FileURL FROM Queue, User, Song, SongContribution WHERE PremiumUser = 1 AND Queue.SongID = Song.SongID AND User.UserID = Queue.UserID AND Queue.SongID = SongContribution.SongID AND SongContribution.Role = 'artist' ORDER BY AmountPaid DESC;");
    $rows = $rs->fetchAll(PDO::FETCH_ASSOC);
 
    foreach($rows as $row)
@@ -50,7 +50,7 @@
       echo"<tr>";
       echo"<td>" . $row["Title"] . "</td>";
       echo"<td>" . $row["Role"] . "</td>";
-      echo"<td>" . $row["UserName"] . "</td>";
+      echo"<td>" . $row["Name"] . "</td>";
       echo"<td>" . $row["FileURL"] . "</td>";
       echo"</tr>";
 
@@ -79,7 +79,7 @@
 </thead>
 
 <?php
-   $rs = $pdo->query("SELECT Title, Role, UserName, FileURL FROM Queue, User, Song, SongContribution WHERE PremiumUser = 0 AND Queue.SongID = Song.SongID AND User.UserID = Queue.UserID AND Queue.SongID = SongContribution.SongID AND SongContribution.Role = 'artist' ORDER BY AmountPaid;");
+   $rs = $pdo->query("SELECT Title, Role, Name, FileURL FROM Queue, User, Song, SongContribution WHERE PremiumUser = 0 AND Queue.SongID = Song.SongID AND User.UserID = Queue.UserID AND Queue.SongID = SongContribution.SongID AND SongContribution.Role = 'artist' ORDER BY processing_time ASC;");
    $rows = $rs->fetchAll(PDO::FETCH_ASSOC);
 
    foreach($rows as $row)
@@ -87,7 +87,7 @@
       echo"<tr>";
       echo"<td>" . $row["Title"] . "</td>";
       echo"<td>" . $row["Role"] . "</td>";
-      echo"<td>" . $row["UserName"] . "</td>";
+      echo"<td>" . $row["Name"] . "</td>";
       echo"<td>" . $row["FileURL"] . "</td>";
       echo"</tr>";
 
@@ -97,29 +97,30 @@
 
 <form method="POST">
     Select Queue to play next:
-    <select size=2 name="Queuetype">
-       <option value="PR">PriorityQueue</option>
-       <option value="NP">Non-PriorityQueue</option>
-    </select>
+    <input type="radio" name="radio1" value="Priority" checked="checked"/>Priority Queue
+    <input type="radio" name="radio1" value="Non-Priority"/>Non-Priority Queue
     <input type="submit" name="submit"/>
+    <input type="reset" value="reset"/>
 
 </form>
 <?php
-   $q=$_POST['Queuetype'];
+   $q=$_POST['radio1'];
 
-   if($q == "NP")
+   if($q == "Non-Priority")
    {
-       $update = $pdo->prepare("DELETE FROM Queue WHERE PremiumUser=0 LIMIT 1;");
+       $update = $pdo->prepare("DELETE FROM Queue WHERE PremiumUser=0 ORDER BY processing_time ASC >
        $update->execute();
+       echo "<meta http-equiv='refresh' content='0'>";
    }
-  else if($q == "PR")
+   else if($q == "Priority")
    {
-       $update = $pdo->prepare("DELETE FROM Queue WHERE PremiumUser=1 LIMIT 1;");
+       $update = $pdo->prepare("DELETE FROM Queue WHERE PremiumUser=1 ORDER BY AmountPaid DESC LIMI>
        $update->execute();
+       echo "<meta http-equiv='refresh' content='0'>";  
    }
 
 
 ?>
 
-</html>
 
+</html>
