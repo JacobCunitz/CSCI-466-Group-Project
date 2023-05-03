@@ -37,6 +37,25 @@ INSERT INTO Song
       VALUES('Back in Black',
              'Original',
               'https://www.youtube.com/watch?v=pAgnJDJN4VA');
+              
+INSERT INTO Song
+      (Title, Description, FileURL)
+      VALUES('Changes',
+             'Original',
+             'https://www.youtube.com/watch?v=xg3J5slvB-k');
+             
+INSERT INTO Song
+      (Title, Description, FileURL)
+      VALUES('Without Me',
+             'Original',
+             'https://www.youtube.com/watch?v=YVkUvmDQ3HY');
+             
+INSERT INTO Song
+      (Title, Description, FileURL)
+      VALUES('Till I Collapse',
+             'Original',
+             'https://www.youtube.com/watch?v=Pi3_Zs-oRUo');
+             
 INSERT INTO Song
       (Title, Description, FileURL)
       VALUES('Sundress',
@@ -162,7 +181,19 @@ INSERT INTO Contributor
        
 INSERT INTO SongContribution
        (ContributorID, SongID, Role)
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Eminem'), (SELECT SongID FROM Song WHERE Title = 'Till I Collapse'), 'artist');
+       
+INSERT INTO SongContribution
+       (ContributorID, SongID, Role)
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Eminem'), (SELECT SongID FROM Song WHERE Title = 'Without Me'), 'artist');
+       
+INSERT INTO SongContribution
+       (ContributorID, SongID, Role)
        VALUE((SELECT ContributorID FROM Contributor WHERE Name = '2Pac'), (SELECT SongID FROM Song WHERE Title = 'Dear Mama'), 'artist');
+       
+INSERT INTO SongContribution
+       (ContributorID, SongID, Role)
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = '2Pac'), (SELECT SongID FROM Song WHERE Title = 'Changes'), 'artist');
        
 INSERT INTO SongContribution
        (ContributorID, SongID, Role)
@@ -239,10 +270,6 @@ INSERT INTO SongContribution
 INSERT INTO SongContribution
        (ContributorID, SongID, Role)
        VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Kurt Cobain'), (SELECT SongID FROM Song WHERE Title = 'Smells Like Teen Spirit'), 'main artist');
-       
-INSERT INTO SongContribution
-       (ContributorID, SongID, Role)
-       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Eminem'), (SELECT SongID FROM Song WHERE Title = 'Forever'), 'featured artist');
        
 INSERT INTO SongContribution
        (ContributorID, SongID, Role)
