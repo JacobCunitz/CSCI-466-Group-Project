@@ -284,35 +284,35 @@ INSERT INTO SongContribution
        
 INSERT INTO SongContribution
        (ContributorID, SongID, Role)
-       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Drake'), (SELECT SongID FROM Song WHERE Title = 'Forever'), 'featured artist');
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Drake'), (SELECT SongID FROM Song WHERE Title = 'Forever'), 'artist');
        
 INSERT INTO SongContribution
        (ContributorID, SongID, Role)
-       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Brian Johnson'), (SELECT SongID FROM Song WHERE Title = 'Hells Bells'), 'main artist');
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Brian Johnson'), (SELECT SongID FROM Song WHERE Title = 'Hells Bells'), 'artist');
        
 INSERT INTO SongContribution
        (ContributorID, SongID, Role)
-       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'ASAP Rocky'), (SELECT SongID FROM Song WHERE Title = 'Sundress'), 'main artist');
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'ASAP Rocky'), (SELECT SongID FROM Song WHERE Title = 'Sundress'), 'artist');
 
 INSERT INTO SongContribution
        (ContributorID, SongID, Role)
-       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Frank Ocean'), (SELECT SongID FROM Song WHERE Title = 'Pyramids'), 'main artist');
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Frank Ocean'), (SELECT SongID FROM Song WHERE Title = 'Pyramids'), 'artist');
        
 INSERT INTO SongContribution
        (ContributorID, SongID, Role)
-       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Frank Ocean'), (SELECT SongID FROM Song WHERE Title = 'Nikes'), 'main artist');
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Frank Ocean'), (SELECT SongID FROM Song WHERE Title = 'Nikes'), 'artist');
 
 INSERT INTO SongContribution
        (ContributorID, SongID, Role)
-       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Frank Ocean'), (SELECT SongID FROM Song WHERE Title = 'Nights'), 'main artist');
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Frank Ocean'), (SELECT SongID FROM Song WHERE Title = 'Nights'), 'artist');
 
 INSERT INTO SongContribution
        (ContributorID, SongID, Role)
-       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Childish Gambino'), (SELECT SongID FROM Song WHERE Title = 'Redbone'), 'main artist');
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Childish Gambino'), (SELECT SongID FROM Song WHERE Title = 'Redbone'), 'artist');
 
 INSERT INTO SongContribution
        (ContributorID, SongID, Role)
-       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Childish Gambino'), (SELECT SongID FROM Song WHERE Title = '3005'), 'main artist');
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Childish Gambino'), (SELECT SongID FROM Song WHERE Title = '3005'), 'artist');
 
 INSERT INTO SongContribution
        (ContributorID, SongID, Role)
@@ -320,7 +320,7 @@ INSERT INTO SongContribution
 
 INSERT INTO SongContribution
        (ContributorID, SongID, Role)
-       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Robert Plant'), (SELECT SongID FROM Song WHERE Title = 'Stairway to Heaven'), 'artist');
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Robert Plant'), (SELECT SongID FROM Song WHERE Title = 'Stairway to Heaven'), 'main artist');
        
 INSERT INTO SongContribution
        (ContributorID, SongID, Role)
@@ -383,23 +383,23 @@ INSERT INTO Song
              
 INSERT INTO SongContribution
        (ContributorID, SongID, Role)
-       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Frank Ocean'), (SELECT SongID FROM Song WHERE Title = 'White Ferrari'), 'main artist');
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Frank Ocean'), (SELECT SongID FROM Song WHERE Title = 'White Ferrari'), 'artist');
        
 INSERT INTO SongContribution
        (ContributorID, SongID, Role)
-       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Frank Ocean'), (SELECT SongID FROM Song WHERE Title = 'White Ferrari San Holo Remix'), 'main artist');
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Frank Ocean'), (SELECT SongID FROM Song WHERE Title = 'White Ferrari San Holo Remix'), 'artist');
        
  INSERT INTO SongContribution
        (ContributorID, SongID, Role)
-       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Kanye West'), (SELECT SongID FROM Song WHERE Title = 'Flashing Lights'), 'main artist');
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Kanye West'), (SELECT SongID FROM Song WHERE Title = 'Flashing Lights'), 'artist');
        
  INSERT INTO SongContribution
        (ContributorID, SongID, Role)
-       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Kanye West'), (SELECT SongID FROM Song WHERE Title = 'Runaway'), 'main artist');
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Kanye West'), (SELECT SongID FROM Song WHERE Title = 'Runaway'), 'artist');
        
 INSERT INTO SongContribution
        (ContributorID, SongID, Role)
-       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Drake'), (SELECT SongID FROM Song WHERE Title = 'Trophies'), 'main artist');
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Drake'), (SELECT SongID FROM Song WHERE Title = 'Trophies'), 'artist');
        
 
 
