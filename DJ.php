@@ -17,10 +17,10 @@
                 }
     </style>
 <?php
-   $username='';
+   $username='root';
    $password='';
    try{
-       $dsn = "mysql:host=courses;dbname= ";
+       $dsn = "mysql:host=localhost;dbname=466GroupProj";
        $pdo = new PDO($dsn, $username, $password);
        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
@@ -108,13 +108,13 @@
 
    if($q == "Non-Priority")
    {
-       $update = $pdo->prepare("DELETE FROM Queue WHERE PremiumUser=0 ORDER BY processing_time ASC >
+       $update = $pdo->prepare("DELETE FROM Queue WHERE PremiumUser=0 ORDER BY processing_time ASC LIMIT 1");
        $update->execute();
        echo "<meta http-equiv='refresh' content='0'>";
    }
    else if($q == "Priority")
    {
-       $update = $pdo->prepare("DELETE FROM Queue WHERE PremiumUser=1 ORDER BY AmountPaid DESC LIMI>
+       $update = $pdo->prepare("DELETE FROM Queue WHERE PremiumUser=1 ORDER BY AmountPaid DESC LIMIT 1");
        $update->execute();
        echo "<meta http-equiv='refresh' content='0'>";  
    }
@@ -124,4 +124,3 @@
 
 
 </html>
-
