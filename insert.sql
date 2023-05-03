@@ -332,6 +332,80 @@ INSERT INTO SongContribution
        VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Led Zepplin'), (SELECT SongID FROM Song WHERE Title = 'Stairway to Heaven'), 'artist');
 */
 
+/*5 Additional Songs and Users, Jacob Cunitz
+
+INSERT INTO User
+      (Name, UserName, Password, DJ)
+      VALUES('Jennifer Smith', 'USER', 'password4', FALSE);
+      
+INSERT INTO User
+      (Name, UserName, Password, DJ)
+      VALUES('Seth Anderson', 'USER', 'password5', FALSE);
+ 
+INSERT INTO User
+      (Name, UserName, Password, DJ)
+      VALUES('Stephanie Stevens', 'USER', 'password6', FALSE);
+      
+INSERT INTO User
+      (Name, UserName, Password, DJ)
+      VALUES('Michael Anderson', 'USER', 'password7', FALSE);
+      
+INSERT INTO User
+      (Name, UserName, Password, DJ)
+      VALUES('Sarah Warren', 'USER', 'password8', FALSE);
+      
+INSERT INTO Song
+      (Title, Description, FileURL)
+      VALUES('White Ferrari',
+             'Original',
+             'https://www.youtube.com/watch?v=Dlz_XHeUUis');
+            
+INSERT INTO Song
+      (Title, Description, FileURL)
+      VALUES('White Ferrari San Holo Remix',
+             'Remix',
+             'https://www.youtube.com/watch?v=SrqmUux7TWY');
+             
+INSERT INTO Song
+      (Title, Description, FileURL)
+      VALUES('Flashing Lights',
+             'Original',
+             'https://www.youtube.com/watch?v=ZAz3rnLGthg');
+             
+INSERT INTO Song
+      (Title, Description, FileURL)
+      VALUES('Runaway',
+             'Original',
+             'https://www.youtube.com/watch?v=VhEoCOWUtcU');
+        
+INSERT INTO Song
+      (Title, Description, FileURL)
+      VALUES('Trophies',
+             'Original',
+             'https://www.youtube.com/watch?v=vkSFh6HMUtQ');
+             
+INSERT INTO SongContribution
+       (ContributorID, SongID, Role)
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Frank Ocean'), (SELECT SongID FROM Song WHERE Title = 'White Ferrari'), 'main artist');
+       
+INSERT INTO SongContribution
+       (ContributorID, SongID, Role)
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Frank Ocean'), (SELECT SongID FROM Song WHERE Title = 'White Ferrari San Holo Remix'), 'main artist');
+       
+ INSERT INTO SongContribution
+       (ContributorID, SongID, Role)
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Kanye West'), (SELECT SongID FROM Song WHERE Title = 'Flashing Lights'), 'main artist');
+       
+ INSERT INTO SongContribution
+       (ContributorID, SongID, Role)
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Kanye West'), (SELECT SongID FROM Song WHERE Title = 'Runaway'), 'main artist');
+       
+INSERT INTO SongContribution
+       (ContributorID, SongID, Role)
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Drake'), (SELECT SongID FROM Song WHERE Title = 'Trophies'), 'main artist');
+       
+*/
+
 /*2 users and 7 songs, still need to add more contributers -AH
 INSERT INTO User
       (Name, UserName, Password, DJ)
