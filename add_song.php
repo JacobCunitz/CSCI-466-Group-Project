@@ -15,7 +15,7 @@ if (isset($_GET['add'])) {
     $PremiumUser = $_GET['add'];
     $AmountPaid = $PremiumUser == 0 ? 0.00 : 1.99;
 
-    $stmt = $conn->prepare("INSERT INTO queue (UserID, SongID, processing_time, PremiumUser, AmountPaid) VALUES (?, ?, NOW(), ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO Queue (UserID, SongID, processing_time, PremiumUser, AmountPaid) VALUES (?, ?, NOW(), ?, ?)");
     $stmt->bind_param("iiid", $UserID, $SongID, $PremiumUser, $AmountPaid);
     $stmt->execute();
 
