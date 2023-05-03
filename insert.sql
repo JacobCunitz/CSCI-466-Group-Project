@@ -197,7 +197,7 @@ INSERT INTO SongContribution
        
 INSERT INTO SongContribution
        (ContributorID, SongID, Role)
-       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Joe Elliot'), (SELECT SongID FROM Song WHERE Title = 'Love Bites'), 'featured artist');
+       VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Joe Elliott'), (SELECT SongID FROM Song WHERE Title = 'Love Bites'), 'featured artist');
        
 INSERT INTO SongContribution
        (ContributorID, SongID, Role)
