@@ -410,6 +410,10 @@ INSERT INTO User
 INSERT INTO User
       (Name, UserName, Password, DJ)
       VALUES('Jonny Appleseed', 'USER', 'NotApassword', FALSE);
+      
+INSERT INTO User
+      (Name, UserName, Password, DJ)
+      VALUES('Franklin Roose', 'USER', 'YesAPassowrd', FALSE);
 
 INSERT INTO Song (Title, Description, FileURL) VALUES('Viva La Vida', 'solo', 'https://www.youtube.com/watch?v=FSll_OC0L64');
 
@@ -450,6 +454,8 @@ INSERT INTO Contributor (Name) VALUES ('Fabrizio Moretti');
 INSERT INTO Contributor (Name) VALUES ('Jay Z');
 INSERT INTO Contributor (Name) VALUES ('Alicia Keys');
 
+INSERT INTO Contributor (Name) VALUES ('Drake');
+
 INSERT INTO Contributor (Name) VALUES ('Michael Jackson');
 
 INSERT INTO SongContribution (ContributorID, SongID, Role) VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Coldplay'), (SELECT SongID FROM Song WHERE Title = 'Viva La Vida'), 'artist');
@@ -486,4 +492,19 @@ INSERT INTO Queue (UserID, SongID, PremiumUser, AmountPaid) VALUE ((SELECT UserI
 
 INSERT INTO Queue (UserID, SongID, PremiumUser) VALUE ((SELECT UserID FROM User WHERE Name = 'Jane Doe'),(SELECT SongID FROM Song WHERE Title = 'Viva La Vida'), 0);
 
+INSERT INTO Queue (UserID, SongID, PremiumUser) VALUE ((SELECT UserID FROM User WHERE Name = 'Stacy Smith'),(SELECT SongID FROM Song WHERE Title = 'Stairway to Heaven'), 0);
+                                                                 
+INSERT INTO Queue (UserID, SongID, PremiumUser) VALUE ((SELECT UserID FROM User WHERE Name = 'Jennifer Smith'),(SELECT SongID FROM Song WHERE Title = 'White Ferrari'), 0); 
+                                                                 
+INSERT INTO Queue (UserID, SongID, PremiumUser) VALUE ((SELECT UserID FROM User WHERE Name = 'Seth Anderson'),(SELECT SongID FROM Song WHERE Title = 'Runaway'), 0);
+                                                                 
+INSERT INTO Queue (UserID, SongID, PremiumUser) VALUE ((SELECT UserID FROM User WHERE Name = 'Stephanie Stevens'),(SELECT SongID FROM Song WHERE Title = 'Forever'), 0);
+                                                                 
+INSERT INTO Queue (UserID, SongID, PremiumUser, AmountPaid) VALUE ((SELECT UserID FROM User WHERE Name = 'John Doe'),(SELECT SongID FROM Song WHERE Title = 'Nights'), 1, 1.00);
 
+INSERT INTO Queue (UserID, SongID, PremiumUser, AmountPaid) VALUE ((SELECT UserID FROM User WHERE Name = 'Michael Anderson'),(SELECT SongID FROM Song WHERE Title = 'Flashing Lights'), 1, 1.50);
+                                                                 
+INSERT INTO Queue (UserID, SongID, PremiumUser, AmountPaid) VALUE ((SELECT UserID FROM User WHERE Name = 'Sarah Warren'),(SELECT SongID FROM Song WHERE Title = 'Redbone'), 1, 1.99);
+                                                                 
+INSERT INTO Queue (UserID, SongID, PremiumUser, AmountPaid) VALUE ((SELECT UserID FROM User WHERE Name = 'Franklin Roose'),(SELECT SongID FROM Song WHERE Title = 'Everlong'), 1, 0.50);
+                                                                 
