@@ -13,8 +13,7 @@ INSERT INTO SongContribution (ContributorID, SongID, Role) VALUES (2, 1, 'produc
 
 INSERT INTO Queue (UserID, SongID, PremiumUser, AmountPaid) VALUES (1, 1, TRUE, 9.99);
 INSERT INTO Queue (UserID, SongID, PremiumUser, AmountPaid) VALUES (2, 2, FALSE, 0.00);
-/*
-#INSERTING 7 SONGS AND 2 USERS, STILL NEED TO HANDLE CONTRIBUTORS - JACOB C
+
 INSERT INTO User
       (Name, UserName, Password, DJ)
       VALUES('Stacy Smith', 'USER', 'password1', FALSE);
@@ -330,9 +329,7 @@ INSERT INTO SongContribution
 INSERT INTO SongContribution
        (ContributorID, SongID, Role)
        VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Led Zepplin'), (SELECT SongID FROM Song WHERE Title = 'Stairway to Heaven'), 'artist');
-*/
 
-/*5 Additional Songs and Users, Jacob Cunitz
 
 INSERT INTO User
       (Name, UserName, Password, DJ)
@@ -404,9 +401,8 @@ INSERT INTO SongContribution
        (ContributorID, SongID, Role)
        VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Drake'), (SELECT SongID FROM Song WHERE Title = 'Trophies'), 'main artist');
        
-*/
 
-/*2 users and 7 songs, still need to add more contributers -AH
+
 INSERT INTO User
       (Name, UserName, Password, DJ)
       VALUES('Jane Doe', 'USER', 'Notpassword', FALSE);
@@ -492,5 +488,4 @@ INSERT INTO Queue (UserID, SongID, PremiumUser, AmountPaid) VALUE ((SELECT UserI
 
 INSERT INTO Queue (UserID, SongID, PremiumUser) VALUE ((SELECT UserID FROM User WHERE Name = 'Jane Doe'),(SELECT SongID FROM Song WHERE Title = 'Viva La Vida'), 0);
 
-*/
 
