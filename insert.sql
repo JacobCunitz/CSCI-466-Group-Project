@@ -459,7 +459,7 @@ INSERT INTO Contributor (Name) VALUES ('Drake');
 INSERT INTO Contributor (Name) VALUES ('Michael Jackson');
 
 INSERT INTO SongContribution (ContributorID, SongID, Role) VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Coldplay'), (SELECT SongID FROM Song WHERE Title = 'Viva La Vida'), 'artist');
-INSERT INTO SongContribution (ContributorID, SongID, Role) VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Chris Martin', (SELECT SongID FROM Song WHERE Title = 'Viva La Vida'), 'main artist');
+INSERT INTO SongContribution (ContributorID, SongID, Role) VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Chris Martin'), (SELECT SongID FROM Song WHERE Title = 'Viva La Vida'), 'main artist');
 INSERT INTO SongContribution (ContributorID, SongID, Role) VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Guy Berryman'), (SELECT SongID FROM Song WHERE Title = 'Viva La Vida'), 'main artist');
 INSERT INTO SongContribution (ContributorID, SongID, Role) VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Jonny Buckland'), (SELECT SongID FROM Song WHERE Title = 'Viva La Vida'), 'main artist');
 INSERT INTO SongContribution (ContributorID, SongID, Role) VALUE((SELECT ContributorID FROM Contributor WHERE Name = 'Will Champion'), (SELECT SongID FROM Song WHERE Title = 'Viva La Vida'), 'main artist');
