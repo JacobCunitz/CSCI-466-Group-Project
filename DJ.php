@@ -58,7 +58,7 @@ echo '<h2><a href="login.php" class="button">Sign Out</a></h2>';
 </thead>
 
 <?php
-   $rs = $pdo->query("SELECT Title, Contributor.Name AS name1, User.Name AS name2, FileURL FROM Queue, User, Song, SongContribution, Contributor WHERE PremiumUser = 1  AND Contributor.ContributorID = SongContribution.ContributorID AND Queue.SongID = Song.SongID AND User.UserID = Queue.UserID AND Queue.SongID = SongContribution.SongID AND SongContribution.Role = 'artist' ORDER BY AmountPaid DESC;");
+   $rs = $pdo->query("SELECT Title, Contributor.Name AS name1, User.Name AS name2, FileURL FROM Queue, User, Song, SongContribution, Contributor WHERE PremiumUser = 1  AND Contributor.ContributorID = SongContribution.ContributorID AND User.UserId = SongContribution.UserID AND Queue.SongID = Song.SongID AND User.UserID = Queue.UserID AND Queue.SongID = SongContribution.SongID AND SongContribution.Role = 'artist' ORDER BY AmountPaid DESC;");
    $rows = $rs->fetchAll(PDO::FETCH_ASSOC);
 
    foreach($rows as $row)
@@ -95,7 +95,7 @@ echo '<h2><a href="login.php" class="button">Sign Out</a></h2>';
 </thead>
 
 <?php
-   $rs = $pdo->query("SELECT Title, Contributor.Name AS name1, User.Name AS name2, FileURL FROM Queue, User, Song, SongContribution, Contributor WHERE PremiumUser = 0  AND Contributor.ContributorID = SongContribution.ContributorID AND Queue.SongID = Song.SongID AND User.UserID = Queue.UserID AND Queue.SongID = SongContribution.SongID AND SongContribution.Role = 'artist' ORDER BY processing_time ASC;");
+   $rs = $pdo->query("SELECT Title, Contributor.Name AS name1, User.Name AS name2, FileURL FROM Queue, User, Song, SongContribution, Contributor WHERE PremiumUser = 0  AND Contributor.ContributorID = SongContribution.ContributorID AND User.UserId = SongContribution.UserID AND Queue.SongID = Song.SongID AND User.UserID = Queue.UserID AND Queue.SongID = SongContribution.SongID AND SongContribution.Role = 'artist' ORDER BY processing_time ASC;");
    $rows = $rs->fetchAll(PDO::FETCH_ASSOC);
 
    foreach($rows as $row)
