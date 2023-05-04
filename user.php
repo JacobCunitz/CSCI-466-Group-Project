@@ -54,7 +54,7 @@
     $searchTerm = isset($_GET['search']) ? $_GET['search'] : '';
 
     // Construct the SQL query based on the sorting option and search term
-    $sql = "SELECT Song.*, Contributor.Name AS Artist FROM Song LEFT JOIN SongContribution ON Song.SongID = SongContribution.SongID LEFT JOIN Contributor ON SongContribution.ContributorID = Contributor.ContributorID";
+    $sql = "SELECT Song.*, Contributor.Name AS Artist FROM Song LEFT JOIN SongContribution ON Song.SongID = SongContribution.SongID LEFT JOIN Contributor ON SongContribution.ContributorID = Contributor.ContributorID WHERE Role = 'artist'";
     if (!empty($searchTerm)) {
         $sql .= " WHERE Song.Title LIKE '%$searchTerm%' OR Song.Description LIKE '%$searchTerm%' OR Contributor.Name LIKE '%$searchTerm%'";
     }
